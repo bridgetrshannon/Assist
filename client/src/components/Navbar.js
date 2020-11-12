@@ -29,10 +29,9 @@ class Navbar extends Component {
       <Router>
         <MDBNavbar color="purple-gradient" dark expand="md">
           <MDBNavbarBrand>
-            <strong className="white-text">Assist</strong>
+            <h3 className="white-text">Assist</h3>
           </MDBNavbarBrand>
-          <MDBIcon far icon="heart fa-lg" />
-          {/* <i class="fas fa-hand-holding-heart fa-2x"></i> */}
+          <MDBIcon icon="hand-holding-heart fa-lg white-text mb-2" />
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav right>
