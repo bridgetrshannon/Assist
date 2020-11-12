@@ -3,8 +3,8 @@ import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
 
 const Signup = () => {
   return (
-    <MDBContainer className="d-flex justify-content-center">
-      <MDBRow>
+    <MDBContainer>
+      <MDBRow center>
         <MDBCol md="6">
           <div className="mx-auto mt-5">
             <form>
