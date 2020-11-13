@@ -1,6 +1,9 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from "mdbreact";
 
+
+//make an API request when we fill out, have method that posts user input values to /api/user/register
+//ref/onchange for input
 const Signup = () => {
   return (
     <MDBContainer>
