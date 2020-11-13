@@ -1,8 +1,6 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon } from "mdbreact";
 
-// name, email, phone number and then title and subject
-
 const Create = () => {
   return (
     <MDBContainer className="mt-5">
@@ -76,7 +74,7 @@ const Create = () => {
             />
             <div className="text-center mt-4">
               <MDBBtn color="deep-purple" outline type="submit">
-                Submit
+                Create
                 <MDBIcon far icon="paper-plane" className="ml-2" />
               </MDBBtn>
             </div>

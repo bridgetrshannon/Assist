@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import Navbar from "./components/Navbar";
-// import Signup from "./components/Signup";
-// import Login from "./components/Login";
-// import About from "./components/About";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
+import About from "./components/About";
 import Create from "./components/Create";
+import Search from "./components/Search";
 import "./App.css";
 
 class App extends Component {
@@ -14,7 +15,8 @@ class App extends Component {
         {/* <Signup /> */}
         {/* <Login /> */}
         {/* <About /> */}
-        <Create />
+        {/* <Create /> */}
+        <Search />
       </div>
     );
   }
