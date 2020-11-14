@@ -22,3 +22,12 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+#landingPageImg {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+#landingPagePad {
+padding-top: 250px;
+}

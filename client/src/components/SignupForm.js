@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBBtn, MDBInput } from "mdbreact";
+import { MDBInput } from "mdbreact";
 
 const SignupForm = () => {
   return (
@@ -28,11 +28,6 @@ const SignupForm = () => {
           className="grey-text"
         />
         <br />
-        <div className="text-center mt-4">
-          <MDBBtn className="btn btn-elegant" type="submit">
-            Sign Up
-          </MDBBtn>
-        </div>
       </form>
     </div>
   );
