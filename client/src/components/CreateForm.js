@@ -1,71 +1,55 @@
 import React from "react";
+import { MDBInput } from "mdbreact";
+import StateDropdown from "../components/StateDropdown";
 
 const CreateForm = () => {
   return (
     <div>
       <form>
         <p className="h4 text-center mb-4">Create an Opportunity</p>
-        <label htmlFor="defaultFormContactNameEx" className="grey-text">
-          Name
-        </label>
-        <input
+        <MDBInput
+          label="name"
+          group
           type="text"
-          id="defaultFormContactNameEx"
-          className="form-control"
+          validate
+          error="wrong"
+          success="right"
+          htmlFor="defaultFormRegisterNameEx"
+          className="grey-text"
         />
-        <br />
-
-        <label htmlFor="defaultFormContactEmailEx" className="grey-text">
-          Email
-        </label>
-        <input
+        <MDBInput
+          label="email"
+          group
           type="email"
-          id="defaultFormContactEmailEx"
-          className="form-control"
+          validate
+          error="wrong"
+          success="right"
+          htmlFor="defaultFormRegisterEmailEx"
+          className="grey-text"
         />
-        <br />
-
-        <label htmlFor="defaultFormContactPhoneNumberEx" className="grey-text">
-          Phone Number
-        </label>
-        <input
-          type="number"
-          id="defaultFormContactPhoneNumberEx"
-          className="form-control"
-        />
-        <br />
-
-        <label htmlFor="defaultFormContactSubjectEx" className="grey-text">
-          Opportunity Title
-        </label>
-        <input
+        <MDBInput
+          label="phone number"
+          group
           type="text"
-          id="defaultFormContactSubjectEx"
-          className="form-control"
+          validate
+          error="wrong"
+          success="right"
+          htmlFor="defaultFormRegisterPhoneNumberEx"
+          className="grey-text"
         />
-        <br />
-        <label htmlFor="defaultFormContactMessageEx" className="grey-text">
-          State
-        </label>
-        <select
-          className="browser-default custom-select"
-          className="form-control"
-        >
-          <option></option>
-          <option value="1">Option 1</option>
-          <option value="2">Option 2</option>
-          <option value="3">Option 3</option>
-        </select>
-        <br />
-        <label htmlFor="defaultFormContactMessageEx" className="grey-text">
-          Short Description
-        </label>
-        <textarea
+        <MDBInput
+          label="opportunity title"
+          group
           type="text"
-          id="defaultFormContactMessageEx"
-          className="form-control"
-          rows="3"
+          validate
+          error="wrong"
+          success="right"
+          htmlFor="defaultFormRegisterTitleEx"
+          className="grey-text"
         />
+        <StateDropdown />
+        <MDBInput type="textarea" label="short description" rows="3" />
+
         <br />
         <br />
       </form>

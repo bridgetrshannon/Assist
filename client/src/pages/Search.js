@@ -2,7 +2,7 @@ import React from "react";
 import SearchForm from "../components/SearchForm";
 import StateDropdown from "../components/StateDropdown";
 import SearchCard from "../components/SearchCard";
-import OpportunityBtn from "../components/OpportunityBtn";
+import SearchBtn from "../components/SearchBtn";
 import { MDBRow, MDBCol } from "mdbreact";
 
 const Search = () => {
@@ -18,7 +18,7 @@ const Search = () => {
       </MDBRow>
       <MDBRow center className="mt-1">
         <MDBCol md="9">
-          <OpportunityBtn />
+          <SearchBtn />
           <SearchCard />
           <SearchCard />
           <SearchCard />
