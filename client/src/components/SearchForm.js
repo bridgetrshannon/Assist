@@ -4,7 +4,17 @@ import { MDBInput } from "mdbreact";
 const SearchForm = () => {
   return (
     <div>
-      <MDBInput hint="Search by Keyword" type="text" containerClass="mt-0" />
+      <MDBInput
+        label="search by keyword"
+        group
+        type="text"
+        validate
+        error="wrong"
+        success="right"
+        htmlFor="defaultFormRegisterSearchEx"
+        className="grey-text"
+        containerClass="mt-0"
+      />
     </div>
   );
 };

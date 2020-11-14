@@ -20,7 +20,7 @@ const SearchCard = () => {
               <MDBCol>
                 <img
                   src="https://post.greatist.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg"
-                  width="215px"
+                  width="160px"
                 />
               </MDBCol>
               <MDBCol>
@@ -34,8 +34,8 @@ const SearchCard = () => {
                 <MDBCardTitle>Contact</MDBCardTitle>
                 <MDBCardText>
                   John Smith <br></br>
-                  (407) 555-5555 <br></br>
-                  447 Gumdrop Pl. <br></br> Candyland, FL
+                  (407) 569-5555 <br></br>
+                  email@email.com
                 </MDBCardText>
               </MDBCol>
             </MDBRow>
