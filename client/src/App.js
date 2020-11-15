@@ -1,25 +1,26 @@
-import React, { Component } from "react";
-import Navbar from "./components/Navbar";
-import Signup from "./pages/Signup";
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Login from "./pages/Login";
-import About from "./components/ImageCard";
-import Create from "./components/Create";
-import Search from "./pages/Search";
-import "./App.css";
+import Home from "./pages/Home";
+import Signup from "./pages/Signup";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Wrapper from "./components/Wrapper";
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
+function App() {
+  return (
+    <Router>
+      <div>
         <Navbar />
-        {/* <Signup /> */}
-        {/* <Login /> */}
-        {/* <About /> */}
-        {/* <Create /> */}
-        <Search />
+        <Wrapper>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/signup" component={Signup} />
+        </Wrapper>
+        <Footer />
       </div>
-    );
-  }
+    </Router>
+  );
 }
 
 export default App;
