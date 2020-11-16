@@ -1,16 +1,17 @@
 import React from "react";
 import {
   MDBCardImage,
-  MDBIcon,
-  MDBBtn,
   MDBCard,
   MDBCardBody,
   MDBCardTitle,
+  MDBRow,
 } from "mdbreact";
+import DeleteBtn from "./DeleteBtn";
+import EditBtn from "./EditBtn";
 
 const MyPostsCard = () => {
   return (
-    <div>
+    <div className="align-content-center">
       <MDBCard>
         <MDBCardImage
           className="img-fluid"
@@ -18,12 +19,10 @@ const MyPostsCard = () => {
         />
         <MDBCardBody>
           <MDBCardTitle>My Post</MDBCardTitle>
-          <MDBBtn className="rounded p-2" color="success" size="sm">
-            <MDBIcon far icon="edit" size="2x" />
-          </MDBBtn>
-          <MDBBtn className="rounded p-2" color="danger" size="sm">
-            <MDBIcon far icon="trash-alt" size="2x" />
-          </MDBBtn>
+          <div className="d-flex justify-content-center">
+          <EditBtn />
+          <DeleteBtn />
+          </div>
         </MDBCardBody>
       </MDBCard>
     </div>
