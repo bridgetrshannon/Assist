@@ -6,6 +6,7 @@ import About from "./components/ImageCard";
 import Create from "./pages/Create";
 import Search from "./pages/Search";
 import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 import "./App.css";
 
 class App extends Component {
@@ -17,8 +18,9 @@ class App extends Component {
         {/* <Login /> */}
         {/* <About /> */}
         {/* <Create /> */}
-        <Home />
+        {/* <Home /> */}
         {/* <Search /> */}
+        <Profile />
       </div>
     );
   }
