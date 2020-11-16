@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="border-top py-3 purple-gradient text-white">
+      <footer className="py-2 black text-white">
         &copy; teambridgelyssarules
       </footer>
     </div>

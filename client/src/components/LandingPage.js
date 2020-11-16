@@ -5,7 +5,11 @@ import LandingPageBtn from "./LandingPageBtn";
 const LandingPage = () => {
   return (
     <div>
-      <MDBView src="images/passion.jpg" id="landingPageImg">
+      <MDBView
+        src="images/passion.jpg"
+        id="landingPageImg"
+        className="img-fluid"
+      >
         <MDBMask
           overlay="black-strong"
           className="align-content-center flex-column text-white text-center"
@@ -18,6 +22,8 @@ const LandingPage = () => {
               opportunities
             </h5>
             <br />
+            <p>To start exploring your opportunities</p>
+
             <LandingPageBtn />
           </div>
         </MDBMask>

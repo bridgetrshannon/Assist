@@ -20,8 +20,8 @@ class App extends Component {
         <Login />
         <About />
         <Create />
-        <Search />
-        <Profile /> */}
+        <Search /> */}
+        {/* <Profile /> */}
         <Footer />
       </div>
     );
