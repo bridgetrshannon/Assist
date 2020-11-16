@@ -4,7 +4,6 @@ import {
   MDBCard,
   MDBCardBody,
   MDBCardTitle,
-  MDBRow,
 } from "mdbreact";
 import DeleteBtn from "./DeleteBtn";
 import EditBtn from "./EditBtn";
