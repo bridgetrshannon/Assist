@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  MDBBtn,
-  MDBCard,
-  MDBCardBody,
-  MDBCardTitle,
-  MDBCardImage,
-  MDBIcon,
-} from "mdbreact";
+import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardImage } from "mdbreact";
+import DeleteBtn from "./DeleteBtn";
 
 const SavedOpportunitiesCard = () => {
   return (
@@ -18,9 +12,7 @@ const SavedOpportunitiesCard = () => {
         />
         <MDBCardBody>
           <MDBCardTitle>Saved Opportunity</MDBCardTitle>
-          <MDBBtn className="rounded p-2" color="danger" size="sm">
-            <MDBIcon far icon="trash-alt" size="2x" />
-          </MDBBtn>
+          <DeleteBtn />
         </MDBCardBody>
       </MDBCard>
     </div>
