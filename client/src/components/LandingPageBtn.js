@@ -3,9 +3,13 @@ import { MDBBtn } from "mdbreact";
 
 const LandingPageBtn = () => {
   return (
-    <div className="text-center mb-4">
-      <MDBBtn color="white" outline type="submit">
-        Explore your opportunities
+    <div>
+      <MDBBtn className="rounded p-2" color="white" outline type="submit">
+        Log In
+      </MDBBtn>
+      <span className="align-middle p-1">or</span>
+      <MDBBtn className="rounded p-2" color="white" outline type="submit">
+        Sign Up
       </MDBBtn>
     </div>
   );

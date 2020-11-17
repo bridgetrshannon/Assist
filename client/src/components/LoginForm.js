@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MDBInput, MDBBtn } from "mdbreact";
+import { MDBInput } from "mdbreact";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../actions/authActions";
@@ -87,12 +87,7 @@ class LoginForm extends Component {
             {errors.password}
             {errors.passwordincorrect}
           </span>
-          <br />
-          <div className="text-center mb-4">
-            <MDBBtn color="deep-purple" outline type="submit">
-              Log in
-        </MDBBtn>
-          </div>
+        
         </form>
 
       </div>

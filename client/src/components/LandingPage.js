@@ -1,13 +1,18 @@
 
-import { MDBView, MDBMask, MDBBtn } from "mdbreact";
+import { MDBView, MDBMask } from "mdbreact";
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+// import LandingPageBtn from "./LandingPageBtn";
 
 class LandingPage extends Component {
   render() {
     return (
       <div>
-        <MDBView src="images/passion.jpg" id="landingPageImg">
+        <MDBView
+          src="images/passion.jpg"
+          id="landingPageImg"
+          className="img-fluid"
+        >
           <MDBMask
             overlay="black-strong"
             className="align-content-center flex-column text-white text-center"
@@ -18,14 +23,11 @@ class LandingPage extends Component {
               <h5>
                 Connecting you with volunteer and community engagement
                 opportunities
-            </h5>
+              </h5>
               <br />
-              <div className="text-center mb-4">
-              <Link to="/signup"><MDBBtn color="white" outline type="submit">
-                  Explore your opportunities
-                </MDBBtn>
-                </Link>
-              </div>
+              <p>To start exploring your opportunities</p>
+
+             
             </div>
           </MDBMask>
         </MDBView>

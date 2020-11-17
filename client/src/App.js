@@ -9,6 +9,7 @@ import Login from "./pages/Login";
 import Create from "./pages/Create";
 import Search from "./pages/Search";
 import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper/Wrapper";
 import "./App.css";
@@ -16,7 +17,7 @@ import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import PrivateRoute from "./components/private-route/PrivateRoute";
-import Dashboard from "./components/dashboard/Dashboard";
+
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -50,8 +51,9 @@ class App extends Component {
           <Route exact path="/login" component={Login} />
           <Route exact path="/create" component={Create} />
           <Route exact path="/search" component={Search} />
+          <Route exact path="/profile" component={Profile} />
           <Switch>
-              <PrivateRoute exact path="/home" component={Dashboard} />
+              <PrivateRoute exact path="/" component={Home} />
             </Switch>
         </Wrapper>
         
