@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MDBInput } from "mdbreact";
+import { MDBInput, MDBBtn } from "mdbreact";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../actions/authActions";
@@ -20,13 +20,14 @@ class LoginForm extends Component {
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/home");
+      this.props.history.push("/");
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/home"); // push user to dashboard when they login
+      this.props.history.push("/"); 
+      // push user to dashboard when they login
     }
 
     if (nextProps.errors) {
@@ -87,6 +88,12 @@ class LoginForm extends Component {
             {errors.password}
             {errors.passwordincorrect}
           </span>
+          
+          <div className="text-center mb-4">
+        <MDBBtn color="deep-purple" outline type="submit">
+          Log in
+        </MDBBtn>
+      </div>
         
         </form>
 
