@@ -19,4 +19,6 @@ const SavedOpportunitiesCard = () => {
   );
 };
 
+
 export default SavedOpportunitiesCard;
+

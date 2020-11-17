@@ -26,4 +26,6 @@ const SavedOpportunities = () => {
   );
 };
 
+
 export default SavedOpportunities;
+

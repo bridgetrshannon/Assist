@@ -38,6 +38,7 @@ if (localStorage.jwtToken) {
   }
 }
 
+
 class App extends Component {
   render() {
     return (
@@ -46,6 +47,7 @@ class App extends Component {
       <div className="App">
         <Wrapper>
         <Navbar />
+
           <Route exact path="/" component={Home} />
           <Route exact path="/signup" component={Signup} />
           <Route exact path="/login" component={Login} />
