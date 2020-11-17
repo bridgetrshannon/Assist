@@ -1,29 +1,36 @@
-# Create React Express App
+# Assist
 
-## About This Boilerplate
+<!-- # ![assist](./public/assets/audiophyleLogo.png) -->
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+## Description
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+An application utilizing the Charity Navigator API to connects users with volunteer and community engagement opportunities. This is Project 3 for University of Central Florida's Fullstack Coding Bootcamp. Contributors include Alyssa DeMetro and Bridget Shannon.
 
-## Starting the app locally
+## Languages
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+<img float="left" alt="JavaScript badge" src="https://img.shields.io/badge/JavaScript-95%25-yellow">
 
-```
-npm install
-```
+<img float="left" alt="HTML badge" src="https://img.shields.io/badge/HTML-4%25-orange">
 
-This should install node modules within the server and the client folder.
+<img float="left" alt="CSS badge" src="https://img.shields.io/badge/CSS-1%25-blueviolet">
 
-After both installations complete, run the following command in your terminal:
+## Features
 
-```
-npm start
-```
+- When users arrive at the home page, they are prompted with a call to action to either `login` or `signup`.
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+- Once users log in or sign up, they are redirected to the `search` page. This page allows users to search for an opportunity by keyword and filter by state.
 
-## Deployment (Heroku)
+- Users are presented with their search `results`; an image of the opportunity, title, who to contact about the opportunity, and the option to save.
 
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+- Users can access their saved opportunities and any opportunities they have created on their `profile`. Here, users can delete any saved opportunities and edit or delete any they have created.
+
+- If a user would like to add an opportunity, they click `create` in the navbar. This brings users to a create form where they can submit
+
+## Work in Progress
+
+The following features of the Assist application are works in progress or (WIP).
+
+- ## Deployment & Repository
+
+- Heroku:
+- GitHub: https://github.com/bridgetrshannon/Assist

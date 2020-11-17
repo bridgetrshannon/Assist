@@ -11,7 +11,7 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem,
   MDBIcon,
-  MDBNavLink
+  MDBNavLink,
 } from "mdbreact";
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -50,9 +50,18 @@ class Navbar extends Component {
                     <MDBIcon icon="user" />
                   </MDBDropdownToggle>
                   <MDBDropdownMenu right basic>
-                    <MDBDropdownItem href="/profile">My Profile</MDBDropdownItem>
+                    <MDBDropdownItem href="/profile">
+                      My Profile
+                    </MDBDropdownItem>
                     <MDBDropdownItem href="/saved">
                       Saved Opportunities
+                    </MDBDropdownItem>
+                    <MDBDropdownItem href="#!">
+                      Logout
+                      <MDBIcon
+                        icon="sign-out-alt"
+                        className="ml-2 align-middle"
+                      />
                     </MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
