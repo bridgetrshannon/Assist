@@ -2,7 +2,7 @@
 import { MDBView, MDBMask } from "mdbreact";
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
-// import LandingPageBtn from "./LandingPageBtn";
+import LandingPageBtn from "./LandingPageBtn";
 
 class LandingPage extends Component {
   render() {
@@ -29,6 +29,7 @@ class LandingPage extends Component {
 
              
             </div>
+            <LandingPageBtn />
           </MDBMask>
         </MDBView>
       </div>
