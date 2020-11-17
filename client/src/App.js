@@ -1,4 +1,3 @@
-
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
 import { Provider } from "react-redux";
@@ -17,7 +16,7 @@ import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
 import PrivateRoute from "./components/private-route/PrivateRoute";
-
+import Dashboard from "./components/dashboard/Dashboard";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -28,41 +27,39 @@ if (localStorage.jwtToken) {
   const decoded = jwt_decode(token);
   // Set user and isAuthenticated
   store.dispatch(setCurrentUser(decoded));
-// Check for expired token
+  // Check for expired token
   const currentTime = Date.now() / 1000; // to get in milliseconds
   if (decoded.exp < currentTime) {
     // Logout user
     store.dispatch(logoutUser());
     // Redirect to login
-    window.location.href = "./login";
+    window.location.href = "./home";
   }
 }
-
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-    <Router>
-      <div className="App">
-        <Wrapper>
-        <Navbar />
+        <Router>
+          <div className="App">
+            <Wrapper>
+              <Navbar />
 
-          <Route exact path="/" component={Home} />
-          <Route exact path="/signup" component={Signup} />
-          <Route exact path="/login" component={Login} />
-          <Route exact path="/create" component={Create} />
-          <Route exact path="/search" component={Search} />
-          <Route exact path="/profile" component={Profile} />
-          <Switch>
-              <PrivateRoute exact path="/" component={Home} />
-            </Switch>
-        </Wrapper>
-        
-      </div>
-    </Router>
-    </Provider>
-    )
+              <Route exact path="/" component={Home} />
+              <Route exact path="/signup" component={Signup} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/create" component={Create} />
+              <Route exact path="/search" component={Search} />
+              <Route exact path="/profile" component={Profile} />
+              <Switch>
+                <PrivateRoute exact path="/dashboard" component={Dashboard} />
+              </Switch>
+            </Wrapper>
+          </div>
+        </Router>
+      </Provider>
+    );
   }
 }
-  export default App;
+export default App;

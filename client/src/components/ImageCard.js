@@ -111,7 +111,7 @@ import {
   MDBView,
 } from "mdbreact";
 
-const About = () => {
+const ImageCard = () => {
   return (
     <MDBView
     // src="images/passion.jpg"
@@ -184,4 +184,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default ImageCard;
