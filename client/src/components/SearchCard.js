@@ -19,6 +19,7 @@ const SearchCard = () => {
             <MDBRow>
               <MDBCol>
                 <img
+                alt="searcImg"
                   src="https://post.greatist.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg"
                   width="160px"
                 />

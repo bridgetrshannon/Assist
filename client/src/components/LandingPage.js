@@ -1,35 +1,40 @@
-import React from "react";
+
 import { MDBView, MDBMask } from "mdbreact";
-import LandingPageBtn from "./LandingPageBtn";
+import React, { Component } from "react";
+// import { Link } from "react-router-dom";
+// import LandingPageBtn from "./LandingPageBtn";
 
-const LandingPage = () => {
-  return (
-    <div>
-      <MDBView
-        src="images/passion.jpg"
-        id="landingPageImg"
-        className="img-fluid"
-      >
-        <MDBMask
-          overlay="black-strong"
-          className="align-content-center flex-column text-white text-center"
+class LandingPage extends Component {
+  render() {
+    return (
+      <div>
+        <MDBView
+          src="images/passion.jpg"
+          id="landingPageImg"
+          className="img-fluid"
         >
-          <div id="landingPagePad">
-            <h2>Welcome to Assist</h2>
-            <br />
-            <h5>
-              Connecting you with volunteer and community engagement
-              opportunities
-            </h5>
-            <br />
-            <p>To start exploring your opportunities</p>
+          <MDBMask
+            overlay="black-strong"
+            className="align-content-center flex-column text-white text-center"
+          >
+            <div id="landingPagePad">
+              <h2>Welcome to Assist</h2>
+              <br />
+              <h5>
+                Connecting you with volunteer and community engagement
+                opportunities
+              </h5>
+              <br />
+              <p>To start exploring your opportunities</p>
 
-            <LandingPageBtn />
-          </div>
-        </MDBMask>
-      </MDBView>
-    </div>
-  );
-};
+             
+            </div>
+          </MDBMask>
+        </MDBView>
+      </div>
+    );
+  };
+}
+
 
 export default LandingPage;
