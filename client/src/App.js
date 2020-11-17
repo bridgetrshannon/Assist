@@ -55,7 +55,7 @@ class App extends Component {
           <Route exact path="/search" component={Search} />
           <Route exact path="/profile" component={Profile} />
           <Switch>
-              <PrivateRoute exact path="/" component={Home} />
+              <PrivateRoute exact path="/search" component={Search} />
             </Switch>
         </Wrapper>
         
