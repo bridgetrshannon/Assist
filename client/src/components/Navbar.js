@@ -11,8 +11,9 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem,
   MDBIcon,
+  MDBNavLink
 } from "mdbreact";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 class Navbar extends Component {
   state = {
@@ -35,13 +36,13 @@ class Navbar extends Component {
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav right>
               <MDBNavItem active>
-                <Link to="/">Home</Link>
+                <a href="/">Home</a>
               </MDBNavItem>
               <MDBNavItem>
-                <Link to="/create">Create</Link>
+                <a href="/create">Create</a>
               </MDBNavItem>
               <MDBNavItem>
-                <Link to="/about">About Us</Link>
+                <a href="/about">About Us</a>
               </MDBNavItem>
               <MDBNavItem>
                 <MDBDropdown>
