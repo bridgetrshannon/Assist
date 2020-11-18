@@ -33,7 +33,8 @@ if (localStorage.jwtToken) {
     // Logout user
     store.dispatch(logoutUser());
     // Redirect to login
-    window.location.href = "./home";
+
+    window.location.href = "/home";
   }
 }
 
@@ -45,7 +46,6 @@ class App extends Component {
           <div className="App">
             <Wrapper>
               <Navbar />
-
               <Route exact path="/" component={Home} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/login" component={Login} />
@@ -60,6 +60,8 @@ class App extends Component {
         </Router>
       </Provider>
     );
+
+
   }
 }
 export default App;
