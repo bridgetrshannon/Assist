@@ -11,11 +11,10 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem,
   MDBIcon,
-
 } from "mdbreact";
 import { BrowserRouter as Router } from "react-router-dom";
-// import LogoutBtn from "./LogoutBtn";
-import { logoutUser } from "../../actions/authActions";
+import LogoutBtn from "./LogoutBtn";
+// import { logoutUser } from "../../actions/authActions";
 
 class Navbar extends Component {
   state = {
@@ -58,13 +57,14 @@ class Navbar extends Component {
                     <MDBDropdownItem href="/saved">
                       Saved Opportunities
                     </MDBDropdownItem>
-                    <MDBDropdownItem href="/signup" onClick={this.logoutUser()}>
+                    {/* <MDBDropdownItem href="/signup" onClick={this.logoutUser()}>
                       Logout
                       <MDBIcon
                         icon="sign-out-alt"
                         className="ml-2 align-middle"
                       />
-                    </MDBDropdownItem>
+                    </MDBDropdownItem> */}
+                    <LogoutBtn />
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>

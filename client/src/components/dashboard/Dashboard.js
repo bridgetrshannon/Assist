@@ -13,11 +13,9 @@ class Dashboard extends Component {
   };
 
   render() {
-    // const { user } = this.props.auth;
     return (
       <div>
-        <Home />
-        <MDBDropdownItem href="/signup" onClick={this.logoutUser()}>
+        <MDBDropdownItem href="/" onClick={logoutUser()}>
           Logout
           <MDBIcon icon="sign-out-alt" className="ml-2 align-middle" />
         </MDBDropdownItem>
