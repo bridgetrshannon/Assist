@@ -11,9 +11,9 @@ import {
   MDBDropdownMenu,
   MDBDropdownItem,
   MDBIcon,
-  MDBNavLink,
 } from "mdbreact";
 import { BrowserRouter as Router } from "react-router-dom";
+import LogoutBtn from "./LogoutBtn";
 
 class Navbar extends Component {
   state = {
@@ -34,16 +34,22 @@ class Navbar extends Component {
           <MDBIcon icon="hand-holding-heart fa-lg white-text mb-2" />
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-            <MDBNavbarNav right>
-              <MDBNavItem active>
-                <a href="/">Home</a>
-              </MDBNavItem>
-              <MDBNavItem>
-                <a href="/create">Create</a>
-              </MDBNavItem>
-              <MDBNavItem>
-                <a href="/about">About Us</a>
-              </MDBNavItem>
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">
+                  Home
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/create">
+                  Create
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">
+                  About Us
+                </a>
+              </li>
               <MDBNavItem>
                 <MDBDropdown>
                   <MDBDropdownToggle nav caret>
@@ -56,17 +62,11 @@ class Navbar extends Component {
                     <MDBDropdownItem href="/saved">
                       Saved Opportunities
                     </MDBDropdownItem>
-                    <MDBDropdownItem href="#!">
-                      Logout
-                      <MDBIcon
-                        icon="sign-out-alt"
-                        className="ml-2 align-middle"
-                      />
-                    </MDBDropdownItem>
+                    <LogoutBtn />
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
-            </MDBNavbarNav>
+            </ul>
           </MDBCollapse>
         </MDBNavbar>
       </Router>
