@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../actions/authActions";
-import Home from "../../pages/Home";
-import LogoutBtn from "../LogoutBtn";
 import { MDBDropdownItem, MDBIcon } from "mdbreact";
 
 class Dashboard extends Component {
