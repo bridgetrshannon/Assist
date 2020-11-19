@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MDBInput, MDBBtn } from "mdbreact";
+import { MDBInput, MDBBtn, MDBRow } from "mdbreact";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../actions/authActions";
@@ -49,52 +49,57 @@ class LoginForm extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="mx-auto mt-5">
-        <form noValidate onSubmit={this.onSubmit}>
-          <p className="h4 text-center mb-4">Log in!</p>
-          <MDBInput
-            onChange={this.onChange}
-            value={this.state.email}
-            error={errors.name}
-            label="email"
-            id="email"
-            type="email"
-            success="right"
-            htmlFor="defaultFormRegisterEmailEx"
-            className={classnames("grey-text", "", {
-              invalid: errors.email || errors.emailnotfound,
-            })}
-          />
-          <span className="red-text">
-            {errors.email}
-            {errors.emailnotfound}
-          </span>
+      <form noValidate onSubmit={this.onSubmit}>
+        <div className="mx-auto mt-5"></div>
+        <p className="h4 text-center mb-4">Log in!</p>
+        <MDBInput
+          onChange={this.onChange}
+          value={this.state.email}
+          error={errors.name}
+          label="email"
+          id="email"
+          type="email"
+          success="right"
+          htmlFor="defaultFormRegisterEmailEx"
+          className={classnames("grey-text", "", {
+            invalid: errors.email || errors.emailnotfound,
+          })}
+        />
+        <span className="red-text">
+          {errors.email}
+          {errors.emailnotfound}
+        </span>
 
-          <MDBInput
-            onChange={this.onChange}
-            value={this.state.password}
-            error={errors.password}
-            id="password"
-            type="password"
-            label="password"
-            success="right"
-            htmlFor="defaultFormRegisterPasswordEx"
-            className={classnames("grey-text", "", {
-              invalid: errors.password || errors.passwordincorrect,
-            })}
-          />
-          <span className="red-text">
-            {errors.password}
-            {errors.passwordincorrect}
-          </span>
-
-          <div className="text-center mb-4">
-            <MDBBtn color="deep-purple" outline type="submit">
-              Log in
-            </MDBBtn>
-          </div>
-        </form>
-      </div>
+        <MDBInput
+          onChange={this.onChange}
+          value={this.state.password}
+          error={errors.password}
+          id="password"
+          type="password"
+          label="password"
+          success="right"
+          htmlFor="defaultFormRegisterPasswordEx"
+          className={classnames("grey-text", "", {
+            invalid: errors.password || errors.passwordincorrect,
+          })}
+        />
+        <span className="red-text">
+          {errors.password}
+          {errors.passwordincorrect}
+        </span>
+        <br />
+        <div className="text-center mb-4">
+          <MDBBtn color="deep-purple" outline type="submit">
+            Log in
+          </MDBBtn>
+        </div>
+        <MDBRow>
+          <br />
+          <br />
+          <br />
+          <br />
+        </MDBRow>
+      </form>
     );
   }
 }

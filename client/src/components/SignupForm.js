@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import { MDBInput, MDBBtn } from "mdbreact";
+import { MDBInput, MDBBtn, MDBRow } from "mdbreact";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../actions/authActions";
 import classnames from "classnames";
 import { Link, withRouter } from "react-router-dom";
-
 
 class SignupForm extends Component {
   constructor() {
@@ -13,14 +12,14 @@ class SignupForm extends Component {
     this.state = {
       email: "",
       password: "",
-      errors: {}
+      errors: {},
     };
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors
+        errors: nextProps.errors,
       });
     }
   }
@@ -32,24 +31,23 @@ class SignupForm extends Component {
     }
   }
 
-  onChange = e => {
+  onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
-  onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault();
     const newUser = {
       email: this.state.email,
       password: this.state.password,
     };
     console.log(newUser);
-    this.props.registerUser(newUser, this.props.history); 
-  
+    this.props.registerUser(newUser, this.props.history);
   };
   render() {
     const { errors } = this.state;
     return (
-        <form noValidate onSubmit={this.onSubmit}>
-          <div className="mx-auto mt-5">
+      <form noValidate onSubmit={this.onSubmit}>
+        <div className="mx-auto mt-5">
           <p className="h4 text-center mb-4">Sign up!</p>
           <MDBInput
             onChange={this.onChange}
@@ -62,10 +60,10 @@ class SignupForm extends Component {
             success="right"
             htmlFor="defaultFormRegisterEmailEx"
             className={classnames("grey-text", "", {
-              invalid: errors.name
+              invalid: errors.name,
             })}
           />
-            
+
           <MDBInput
             onChange={this.onChange}
             value={this.state.password}
@@ -77,41 +75,39 @@ class SignupForm extends Component {
             success="right"
             htmlFor="defaultFormRegisterPasswordEx"
             className={classnames("grey-text", "", {
-              invalid: errors.password
+              invalid: errors.password,
             })}
           />
-          </div>
-          <br />
-          <div className="text-center mb-4">
+        </div>
+        <br />
+        <div className="text-center mb-4">
+          <MDBBtn color="deep-purple" outline type="submit">
+            Sign up
+          </MDBBtn>
+        </div>
+        <div className="text-center mb-4">
+          <Link to="/login">
             <MDBBtn color="deep-purple" outline type="submit">
-              Sign up
-        </MDBBtn>
-          </div>
-          <div className="text-center mb-4">
-          <Link to="/login"><MDBBtn color="deep-purple" outline type="submit">
               Log in
-        </MDBBtn>
-            </Link>
-          </div>
-        </form>
-
-      
+            </MDBBtn>
+          </Link>
+        </div>
+      </form>
     );
-  };
+  }
 }
 
 SignupForm.propTypes = {
   registerUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 
-export default connect(
-  mapStateToProps,
-  { registerUser }
-)(withRouter(SignupForm));
+export default connect(mapStateToProps, { registerUser })(
+  withRouter(SignupForm)
+);
