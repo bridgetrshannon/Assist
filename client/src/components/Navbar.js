@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   MDBNavbar,
   MDBNavbarBrand,
-  MDBNavbarNav,
   MDBNavItem,
   MDBNavbarToggler,
   MDBCollapse,
@@ -24,7 +23,8 @@ class Navbar extends Component {
     this.setState({ isOpen: !this.state.isOpen });
   };
 
-  render() {
+  render() { 
+    
     return (
       <Router>
         <MDBNavbar color="purple-gradient" dark expand="md">
@@ -34,19 +34,19 @@ class Navbar extends Component {
           <MDBIcon icon="hand-holding-heart fa-lg white-text mb-2" />
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item">
+                <a className="nav-link" href="/">
                   Home
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/create">
+              <li className="nav-item">
+                <a className="nav-link" href="/create">
                   Create
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/about">
+              <li className="nav-item">
+                <a className="nav-link" href="/about">
                   About Us
                 </a>
               </li>
