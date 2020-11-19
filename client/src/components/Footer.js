@@ -1,15 +1,19 @@
 import React from "react";
+import { MDBFooter, MDBRow } from "mdbreact";
 
 const Footer = () => {
   return (
     <div>
-      <footer className="py-2 black text-white">
+      <MDBFooter
+        color="purple-gradient"
+        className="py-2 
+       
+        text-white"
+      >
         &copy; teambridgelyssarules
-      </footer>
+      </MDBFooter>
     </div>
   );
 };
 
-
 export default Footer;
-

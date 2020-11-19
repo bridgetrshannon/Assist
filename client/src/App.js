@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Welcome from "./pages/Welcome";
 import Profile from "./pages/Profile";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Wrapper from "./components/Wrapper/Wrapper";
 import "./App.css";
 import jwt_decode from "jwt-decode";
@@ -57,6 +58,7 @@ class App extends Component {
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
+              <Footer />
             </Wrapper>
           </div>
         </Router>
