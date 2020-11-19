@@ -23,7 +23,8 @@ class Navbar extends Component {
     this.setState({ isOpen: !this.state.isOpen });
   };
 
-  render() {
+  render() { 
+    
     return (
       <Router>
         <MDBNavbar color="purple-gradient" dark expand="md">
@@ -37,8 +38,10 @@ class Navbar extends Component {
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
+
                 <a className="nav-link" href="/search">
                   Search
+
                 </a>
               </li>
               <li className="nav-item">
