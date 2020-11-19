@@ -29,15 +29,19 @@ class Navbar extends Component {
       <Router>
         <MDBNavbar color="purple-gradient" dark expand="md">
           <MDBNavbarBrand>
-            <h3 className="white-text">Assist</h3>
+            <a href="/">
+              <h3 className="white-text">Assist</h3>
+            </a>
           </MDBNavbarBrand>
           <MDBIcon icon="hand-holding-heart fa-lg white-text mb-2" />
           <MDBNavbarToggler onClick={this.toggleCollapse} />
           <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
-                <a className="nav-link" href="/">
-                  Home
+
+                <a className="nav-link" href="/search">
+                  Search
+
                 </a>
               </li>
               <li className="nav-item">
