@@ -6,40 +6,39 @@ import { loginUser } from "../actions/authActions";
 import classnames from "classnames";
 import { withRouter } from "react-router-dom";
 
-
 class LoginForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
       email: "",
       password: "",
-      errors: {}
+      errors: {},
     };
   }
 
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push("/search");
+      this.props.history.push("/welcome");
     }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      this.props.history.push("/search"); 
+      this.props.history.push("/welcome");
       // push user to dashboard when they login
     }
 
     if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors
+        errors: nextProps.errors,
       });
     }
   }
-  onChange = e => {
+  onChange = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
-  onSubmit = e => {
+  onSubmit = (e) => {
     e.preventDefault();
     const userData = {
       email: this.state.email,
@@ -63,7 +62,7 @@ class LoginForm extends Component {
             success="right"
             htmlFor="defaultFormRegisterEmailEx"
             className={classnames("grey-text", "", {
-              invalid: errors.email || errors.emailnotfound
+              invalid: errors.email || errors.emailnotfound,
             })}
           />
           <span className="red-text">
@@ -81,38 +80,32 @@ class LoginForm extends Component {
             success="right"
             htmlFor="defaultFormRegisterPasswordEx"
             className={classnames("grey-text", "", {
-              invalid: errors.password || errors.passwordincorrect
+              invalid: errors.password || errors.passwordincorrect,
             })}
           />
           <span className="red-text">
             {errors.password}
             {errors.passwordincorrect}
           </span>
-          
-          <div className="text-center mb-4">
-        <MDBBtn color="deep-purple" outline type="submit">
-          Log in
-        </MDBBtn>
-      </div>
-        
-        </form>
 
+          <div className="text-center mb-4">
+            <MDBBtn color="deep-purple" outline type="submit">
+              Log in
+            </MDBBtn>
+          </div>
+        </form>
       </div>
     );
-  };
+  }
 }
-
 
 LoginForm.propTypes = {
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
-export default connect(
-  mapStateToProps,
-  { loginUser }
-  )(withRouter(LoginForm));
+export default connect(mapStateToProps, { loginUser })(withRouter(LoginForm));
