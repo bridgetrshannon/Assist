@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import Create from "./pages/Create";
 import Search from "./pages/Search";
 import Home from "./pages/Home";
+import Welcome from "./pages/Welcome";
 import Profile from "./pages/Profile";
 import Navbar from "./components/Navbar";
 import Wrapper from "./components/Wrapper/Wrapper";
@@ -52,6 +53,7 @@ class App extends Component {
               <Route exact path="/create" component={Create} />
               <Route exact path="/search" component={Search} />
               <Route exact path="/profile" component={Profile} />
+              <Route exact path="/welcome" component={Welcome} />
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
@@ -60,8 +62,6 @@ class App extends Component {
         </Router>
       </Provider>
     );
-
-
   }
 }
 export default App;
