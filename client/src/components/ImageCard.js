@@ -11,10 +11,7 @@ import {
 const ImageCard = () => {
   return (
     <MDBView>
-      <MDBCard
-        className="my-5 mx-5 px-5 pb-5 text-center"
-        // style={{ backgroundColor: "transparent" }}
-      >
+      <MDBCard className="my-5 mx-5 px-5 pb-5 text-center">
         <MDBCardBody>
           <h2 className="h1-responsive font-weight-bold my-5">
             Meet the Developers
@@ -28,7 +25,7 @@ const ImageCard = () => {
             <MDBCol lg="3" md="6" className="mb-lg-0 mb-5">
               <img
                 src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg"
-                className="rounded-circle z-depth-1 img-fluid"
+                className="rounded-circle z-depth-1 img-fluid aboutUsPic"
                 alt="Sample avatar"
               ></img>
               <h5 className="font-weight-bold mt-4 mb-3">Alyssa DeMetro</h5>
@@ -40,20 +37,24 @@ const ImageCard = () => {
                 consectetur, adipisci sed quia non numquam modi tempora eius.
               </p>
               <ul className="list-unstyled mb-0">
-                <a href="#!" className="p-2 fa-lg">
+                <a
+                  target="_blank"
+                  href="https://github.com/leanndemetro"
+                  className="p-2 fa-lg"
+                >
                   <MDBIcon fab icon="github" className="black-text" />
                 </a>
-                <a href="!#" className="p-2 fa-lg li-ic">
+                <a target="_blank" href="!#" className="p-2 fa-lg li-ic">
                   <MDBIcon fab icon="linkedin-in" className="blue-text" />
                 </a>
               </ul>
             </MDBCol>
 
-            <MDBCol lg="3" md="6" className="mb-lg-0 mb-5">
+            <MDBCol lg="3" md="6" className="mb-lg-0 mb-5 center">
               <img
-                src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg"
-                className="rounded-circle z-depth-1 img-fluid"
-                alt="Sample avatar"
+                src="images/bridgetshannon.jpg"
+                className="rounded-circle z-depth-1 img-fluid aboutUsPic "
+                alt="bridget shannon"
               ></img>
               <h5 className="font-weight-bold mt-4 mb-3">Bridget Shannon</h5>
               <p className="text-uppercase blue-text">
@@ -64,10 +65,18 @@ const ImageCard = () => {
                 ipsa accusantium doloremque rem laudantium totam aperiam.
               </p>
               <ul className="list-unstyled mb-0">
-                <a href="#!" className="p-2 fa-lg">
+                <a
+                  target="_blank"
+                  href="https://github.com/bridgetrshannon"
+                  className="p-2 fa-lg"
+                >
                   <MDBIcon fab icon="github" className="black-text" />
                 </a>
-                <a href="!#" className="p-2 fa-lg li-ic">
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/bridget-shannon/"
+                  className="p-2 fa-lg li-ic"
+                >
                   <MDBIcon fab icon="linkedin-in" className="blue-text" />
                 </a>
               </ul>
