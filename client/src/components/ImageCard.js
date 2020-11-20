@@ -1,106 +1,3 @@
-// import React from "react";
-// import {
-//   MDBBtn,
-//   MDBCard,
-//   MDBCardBody,
-//   MDBCardImage,
-//   MDBCardTitle,
-//   MDBCardText,
-//   MDBRow,
-//   MDBCol,
-//   MDBView,
-//   MDBIcon,
-// } from "mdbreact";
-
-// const About = () => {
-//   return (
-//     <MDBRow className="mt-5 d-flex justify-content-center">
-//       <MDBCol md="4">
-//         <MDBCard wide cascade>
-//           <MDBView cascade>
-//             <MDBCardImage
-//               hover
-//               overlay="white-slight"
-//               className="card-img-top"
-//               src="https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20%283%29.jpg"
-//               alt="Card cap"
-//             />
-//           </MDBView>
-
-//           <MDBCardBody cascade className="text-center">
-//             <MDBCardTitle className="card-title">
-//               <strong>Alyssa De Metro</strong>
-//             </MDBCardTitle>
-
-//             <p className="font-weight-bold blue-text">
-//               Fullstack Web Developer
-//             </p>
-
-//             <MDBCardText>
-//               Sed ut perspiciatis unde omnis iste natus sit voluptatem
-//               accusantium doloremque laudantium, totam rem aperiam.{" "}
-//             </MDBCardText>
-
-//             <MDBCol md="12" className="d-flex justify-content-center">
-//               <a href="!#" className="px-2 fa-lg li-ic">
-//                 <MDBIcon fab icon="linkedin-in"></MDBIcon>
-//               </a>
-//               <a href="!#" className="px-2 fa-lg gi-ic">
-//                 <MDBIcon fab icon="github"></MDBIcon>
-//               </a>
-//               <a href="#!" className="px-2 fa-lg email-ic">
-//                 <MDBIcon icon="envelope"></MDBIcon>
-//               </a>
-//             </MDBCol>
-//           </MDBCardBody>
-//         </MDBCard>
-//       </MDBCol>
-//       <MDBCol md="4">
-//         <MDBCard wide cascade>
-//           <MDBView cascade>
-//             <MDBCardImage
-//               hover
-//               overlay="white-slight"
-//               className="card-img-top"
-//               src="https://mdbootstrap.com/img/Photos/Horizontal/People/6-col/img%20%283%29.jpg"
-//               alt="Card cap"
-//             />
-//           </MDBView>
-
-//           <MDBCardBody cascade className="text-center">
-//             <MDBCardTitle className="card-title">
-//               <strong>Bridget Shannon</strong>
-//             </MDBCardTitle>
-
-//             <p className="font-weight-bold blue-text">
-//               Fullstack Web Developer
-//             </p>
-
-//             <MDBCardText>
-//               Sed ut perspiciatis unde omnis iste natus sit voluptatem
-//               accusantium doloremque laudantium, totam rem aperiam.{" "}
-//             </MDBCardText>
-
-//             <MDBCol md="12" className="d-flex justify-content-center">
-//               <a href="!#" className="px-2 fa-lg li-ic">
-//                 <MDBIcon fab icon="linkedin-in"></MDBIcon>
-//               </a>
-//               <a href="!#" className="px-2 fa-lg gi-ic">
-//                 <MDBIcon fab icon="github"></MDBIcon>
-//               </a>
-//               <a href="#!" className="px-2 fa-lg email-ic">
-//                 <MDBIcon icon="envelope"></MDBIcon>
-//               </a>
-//             </MDBCol>
-//           </MDBCardBody>
-//         </MDBCard>
-//       </MDBCol>
-//     </MDBRow>
-//   );
-// };
-
-// export default About;
-
 import React from "react";
 import {
   MDBRow,
@@ -113,11 +10,9 @@ import {
 
 const ImageCard = () => {
   return (
-    <MDBView
-    // src="images/passion.jpg"
-    >
+    <MDBView>
       <MDBCard
-        className="my-5 px-5 pb-5 text-center"
+        className="my-5 mx-5 px-5 pb-5 text-center"
         // style={{ backgroundColor: "transparent" }}
       >
         <MDBCardBody>
