@@ -18,6 +18,16 @@ const CreateForm = () => {
           className="grey-text"
         />
         <MDBInput
+          label="organization"
+          group
+          type="text"
+          validate
+          error="wrong"
+          success="right"
+          htmlFor="defaultFormRegisterOrganizationEx"
+          className="grey-text"
+        />
+        <MDBInput
           label="email"
           group
           type="email"
