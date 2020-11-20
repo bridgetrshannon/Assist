@@ -31,6 +31,29 @@ function Opportunity() {
       })
       .catch((err) => console.log(err));
   }
+  // Add to profile to delete posts or saved opportunities
+  // function deleteOpportunity(id) {
+  //   API.deleteOpportunity(id)
+  //     .then((res) => loadAll())
+  //     .catch((err) => console.log(err));
+  // }
+
+  // function handleInputChange(event) {
+  //   const { name, value } = event.target;
+  //   setFormObject({ ...formObject, [name]: value });
+  // }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    if (formObject.title && formObject.author) {
+      API.saveOpportunity({
+        title: formObject.title,
+        author: formObject.author,
+      })
+        .then((res) => loadAll())
+        .catch((err) => console.log(err));
+    }
+  }
 
   return (
     <div>
@@ -76,6 +99,7 @@ function Opportunity() {
                             outline
                             type="submit"
                             className="text-center mt-4 mb-1 pl-5 pr-5"
+                            onClick={handleFormSubmit}
                           >
                             Save this opportunity
                           </MDBBtn>

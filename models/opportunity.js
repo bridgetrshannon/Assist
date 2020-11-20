@@ -2,13 +2,15 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const opportunitySchema = new Schema({
+  name: { type: String, required: true },
   title: { type: String, required: true },
-  author: { type: String, required: true },
-  synopsis: String,
-  opportunityDate: { type: Date, required: true },
-  phone: { type: Integer, required: true },
-  ein: { type: Integer, required: true },
-  date: { type: Date, default: Date.now }
+  organization: { type: String, required: true },
+  email: { type: String, required: true },
+  textarea: String,
+  opportunityDate: { type: Date },
+  phoneNumber: { type: Number, required: true },
+  ein: { type: Number },
+  date: { type: Date, default: Date.now },
 });
 
 const Opportunity = mongoose.model("Opportunity", opportunitySchema);
