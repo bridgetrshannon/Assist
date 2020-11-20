@@ -13,7 +13,7 @@ const Search = () => {
         <MDBCol md="3">
           <SearchForm />
         </MDBCol>
-        <MDBCol md="1" className="pr-2">
+        <MDBCol md="2" className="pr-2">
           <StateDropdown />
         </MDBCol>
       </MDBRow>
