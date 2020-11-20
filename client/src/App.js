@@ -4,7 +4,7 @@ import { Provider } from "react-redux";
 import store from "./store";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-// import About from "./components/ImageCard";
+import About from "./pages/About";
 import Create from "./pages/Create";
 import Search from "./pages/Search";
 import Home from "./pages/Home";
@@ -55,6 +55,7 @@ class App extends Component {
               <Route exact path="/search" component={Search} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/welcome" component={Welcome} />
+              <Route exact path="/about" component={About} />
               <Switch>
                 <PrivateRoute exact path="/dashboard" component={Dashboard} />
               </Switch>
