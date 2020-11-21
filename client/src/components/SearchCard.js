@@ -10,6 +10,7 @@ import {
   MDBRow,
 } from "mdbreact";
 import API from "../utils/API";
+import noMatch from "./noMatch/index";
 import { List, ListItem } from "../components/List/index";
 
 function Opportunity() {
@@ -113,7 +114,7 @@ function Opportunity() {
           })}
         </List>
       ) : (
-        <h3>No Results to Display</h3>
+        <noMatch />
       )}
     </div>
   );
