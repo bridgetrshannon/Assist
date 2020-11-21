@@ -39,12 +39,18 @@ const ImageCard = () => {
               <ul className="list-unstyled mb-0">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://github.com/leanndemetro"
                   className="p-2 fa-lg"
                 >
                   <MDBIcon fab icon="github" className="black-text" />
                 </a>
-                <a target="_blank" href="!#" className="p-2 fa-lg li-ic">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="!#"
+                  className="p-2 fa-lg li-ic"
+                >
                   <MDBIcon fab icon="linkedin-in" className="blue-text" />
                 </a>
               </ul>
@@ -67,6 +73,7 @@ const ImageCard = () => {
               <ul className="list-unstyled mb-0">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://github.com/bridgetrshannon"
                   className="p-2 fa-lg"
                 >
@@ -74,6 +81,7 @@ const ImageCard = () => {
                 </a>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://www.linkedin.com/in/bridget-shannon/"
                   className="p-2 fa-lg li-ic"
                 >

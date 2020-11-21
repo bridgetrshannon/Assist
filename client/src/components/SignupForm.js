@@ -1,6 +1,5 @@
-
 import React, { Component } from "react";
-import { MDBInput, MDBBtn, MDBRow } from "mdbreact";
+import { MDBInput, MDBBtn } from "mdbreact";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../actions/authActions";
@@ -109,7 +108,6 @@ const mapStateToProps = (state) => ({
   errors: state.errors,
 });
 
-export default connect(
-  mapStateToProps,
-  { registerUser }
-)(withRouter(SignupForm));
+export default connect(mapStateToProps, { registerUser })(
+  withRouter(SignupForm)
+);
