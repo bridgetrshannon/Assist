@@ -16,7 +16,7 @@ import OpportunityBtn from "../components/OpportunityBtn";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
 
-function CreateForm() {
+function CreateForm(props) {
   // Setting our component's initial state
   const [opportunity, setOpportunity] = useState([]);
   const [formObject, setFormObject] = useState({});
@@ -69,7 +69,8 @@ function CreateForm() {
       <form onSubmit={handleFormSubmit}>
         <p className="h4 text-center mb-4">Create an Opportunity</p>
         <MDBInput
-          onChange={handleInputChange}
+          value={props.name}
+          onChange={props.handleInputChange}
           label="name"
           name="name"
           group
@@ -81,7 +82,8 @@ function CreateForm() {
           className="grey-text"
         />
         <MDBInput
-          onChange={handleInputChange}
+          value={props.organization}
+          onChange={props.handleInputChange}
           label="organization"
           group
           name="organization"
@@ -93,7 +95,8 @@ function CreateForm() {
           className="grey-text"
         />
         <MDBInput
-          onChange={handleInputChange}
+          value={props.email}
+          onChange={props.handleInputChange}
           label="email"
           name="email"
           group
@@ -105,7 +108,8 @@ function CreateForm() {
           className="grey-text"
         />
         <MDBInput
-          onChange={handleInputChange}
+          value={props.phoneNumber}
+          onChange={props.handleInputChange}
           label="phone number"
           name="phoneNumber"
           group
@@ -117,7 +121,8 @@ function CreateForm() {
           className="grey-text"
         />
         <MDBInput
-          onChange={handleInputChange}
+          value={props.title}
+          onChange={props.handleInputChange}
           label="opportunity title"
           name="title"
           group
@@ -130,7 +135,8 @@ function CreateForm() {
         />
         <StateDropdown name="state" />
         <MDBInput
-          onChange={handleInputChange}
+          value={props.textarea}
+          onChange={props.handleInputChange}
           type="textarea"
           name="textarea"
           label="short description"

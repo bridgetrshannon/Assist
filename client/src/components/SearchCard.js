@@ -45,11 +45,16 @@ function Opportunity() {
   // }
 
   function handleFormSubmit(event) {
+    console.log("data", formObject);
     event.preventDefault();
-    if (formObject.title && formObject.author) {
+    if (formObject.name && formObject.organization) {
       API.saveOpportunity({
+        name: formObject.name,
+        organization: formObject.organization,
+        email: formObject.email,
+        phoneNumber: parseInt(formObject.phoneNumber),
         title: formObject.title,
-        author: formObject.author,
+        textarea: formObject.textarea,
       })
         .then((res) => loadAll())
         .catch((err) => console.log(err));
