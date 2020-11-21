@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBFooter, MDBRow } from "mdbreact";
+import { MDBFooter } from "mdbreact";
 
 const Footer = () => {
   return (

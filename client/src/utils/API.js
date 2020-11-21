@@ -16,5 +16,4 @@ export default {
 //   // Saves a book to the database
 //   saveOpportunity: function(OpportunityData) {
 //     return axios.post("/api/opportunity", OpportunityData);
-//   }
 };

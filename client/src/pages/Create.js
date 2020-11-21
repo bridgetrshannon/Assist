@@ -1,6 +1,6 @@
 import React from "react";
 import CreateForm from "../components/CreateForm";
-import OpportunityBtn from "../components/OpportunityBtn";
+// import OpportunityBtn from "../components/OpportunityBtn";
 import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 const Create = () => {
@@ -10,7 +10,7 @@ const Create = () => {
         <MDBRow center>
           <MDBCol md="6">
             <CreateForm />
-            <OpportunityBtn />
+            {/* <OpportunityBtn /> */}
           </MDBCol>
         </MDBRow>
       </MDBContainer>
