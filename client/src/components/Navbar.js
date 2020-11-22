@@ -63,7 +63,7 @@ class Navbar extends Component {
                     <MDBDropdownItem href="/profile">
                       My Profile
                     </MDBDropdownItem>
-                    <MDBDropdownItem href="/saved">
+                    <MDBDropdownItem href="/profile">
                       Saved Opportunities
                     </MDBDropdownItem>
                     <LogoutBtn />

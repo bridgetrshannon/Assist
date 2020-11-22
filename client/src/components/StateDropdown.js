@@ -1,11 +1,23 @@
 import React from "react";
 
-const StateDropdown = () => {
-  return (
-    <div>
-      <select className="form-control grey-text">
-        
-          <option value="" selected="selected">Select a State</option>
+class stateDropdown extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: 'Select your state'};
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+    console.log(event.target.value);
+  }
+
+
+  render() {
+    return (
+       
+          <select className="form-control grey-text" value={this.state.value} onChange={this.handleChange}>
   <option value="AL">Alabama</option>
   <option value="AK">Alaska</option>
   <option value="AZ">Arizona</option>
@@ -57,9 +69,10 @@ const StateDropdown = () => {
   <option value="WV">West Virginia</option>
   <option value="WI">Wisconsin</option>
   <option value="WY">Wyoming</option>
-      </select>
-    </div>
-  );
-};
+          </select>
+     
+    );
+  }
+}
 
-export default StateDropdown;
+export default stateDropdown;

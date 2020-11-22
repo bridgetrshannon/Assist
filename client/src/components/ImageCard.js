@@ -24,7 +24,7 @@ const ImageCard = () => {
           <MDBRow className="d-flex justify-content-center">
             <MDBCol lg="3" md="6" className="mb-lg-0 mb-5">
               <img
-                src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg"
+                src="https://i.imgur.com/DjvIMLN.jpg"
                 className="rounded-circle z-depth-1 img-fluid aboutUsPic"
                 alt="Sample avatar"
               ></img>

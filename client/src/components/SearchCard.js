@@ -10,7 +10,7 @@ import {
   MDBRow,
 } from "mdbreact";
 import API from "../utils/API";
-import noMatch from "./noMatch/index";
+import NoMatch from "./noMatch";
 import { List, ListItem } from "../components/List/index";
 
 function Opportunity() {
@@ -75,7 +75,7 @@ function Opportunity() {
                         <MDBCol>
                           <img
                             alt="searchImg"
-                            src="https://post.greatist.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg"
+                            src="https://i.imgur.com/m6LLxbr.jpg"
                             width="160px"
                           />
                         </MDBCol>
