@@ -68,6 +68,7 @@ function CreateForm(props) {
     <div>
       <form onSubmit={handleFormSubmit}>
         <p className="h4 text-center mb-4">Create an Opportunity</p>
+        <br />
         <MDBInput
           value={props.name}
           onChange={props.handleInputChange}
@@ -133,7 +134,9 @@ function CreateForm(props) {
           htmlFor="defaultFormRegisterTitleEx"
           className="grey-text"
         />
+        <br />
         <StateDropdown name="state" />
+        <br />
         <MDBInput
           value={props.textarea}
           onChange={props.handleInputChange}
@@ -165,7 +168,7 @@ function CreateForm(props) {
                           <MDBCol>
                             <img
                               alt="searchImg"
-                              src="https://post.greatist.com/wp-content/uploads/sites/3/2020/02/322868_1100-1100x628.jpg"
+                              src="https://i.imgur.com/46ftrUw.jpg"
                               width="160px"
                             />
                           </MDBCol>
@@ -177,31 +180,7 @@ function CreateForm(props) {
                               {opportunity.irsClassification.classification}
                             </MDBCardText>
                           </MDBCol>
-                          <MDBCol>
-                            <MDBCardTitle>Located at:</MDBCardTitle>
-                            <MDBCardText>
-                              {opportunity.mailingAddress.streetAddress1}{" "}
-                              <br></br>
-                              {opportunity.mailingAddress.city + ", "}
-                              {opportunity.mailingAddress.stateOrProvince}
-                              <br></br>
-                              {opportunity.mailingAddress.postalCode}
-                            </MDBCardText>
-                          </MDBCol>
-                        </MDBRow>
-                        <MDBRow>
-                          <MDBCol></MDBCol>
-                          <MDBCol>
-                            <MDBBtn
-                              color="deep-purple"
-                              outline
-                              type="submit"
-                              className="text-center mt-4 mb-1 pl-5 pr-5"
-                              onClick={handleFormSubmit}
-                            >
-                              Save this opportunity
-                            </MDBBtn>
-                          </MDBCol>
+                         
                         </MDBRow>
                       </MDBCardBody>
                     </MDBCard>
