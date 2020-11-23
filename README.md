@@ -6,9 +6,9 @@ An application utilizing the Charity Navigator API to connects users with volunt
 
 ## Languages
 
-<img float="left" alt="JavaScript badge" src="https://img.shields.io/badge/JavaScript-95%25-yellow">
+<img float="left" alt="JavaScript badge" src="https://img.shields.io/badge/JavaScript-97%25-yellow">
 
-<img float="left" alt="HTML badge" src="https://img.shields.io/badge/HTML-4%25-orange">
+<img float="left" alt="HTML badge" src="https://img.shields.io/badge/HTML-2%25-orange">
 
 <img float="left" alt="CSS badge" src="https://img.shields.io/badge/CSS-1%25-blueviolet">
 
@@ -27,6 +27,10 @@ An application utilizing the Charity Navigator API to connects users with volunt
 ## Work in Progress
 
 The following features of the Assist application are works in progress or (WIP).
+
+- Filtering `searches` by keyword
+- Rendering content from `create form` onto cards that render to a user's `profile` and displays in the `search`
+- User can `save` opportunities to their `profile`
 
 - ## Deployment & Repository
 
