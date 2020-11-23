@@ -153,7 +153,7 @@ function Opportunity() {
                           <img
                             alt="searchImg"
                             src="https://i.imgur.com/46ftrUw.jpg"
-                            width="180px"
+                            width="160px"
                           />
                         </MDBCol>
                         <MDBCol>
