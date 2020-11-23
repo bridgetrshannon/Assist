@@ -152,8 +152,8 @@ function Opportunity() {
                         <MDBCol>
                           <img
                             alt="searchImg"
-                            src="https://i.imgur.com/m6LLxbr.jpg"
-                            width="160px"
+                            src="https://i.imgur.com/46ftrUw.jpg"
+                            width="180px"
                           />
                         </MDBCol>
                         <MDBCol>
@@ -172,11 +172,6 @@ function Opportunity() {
                             <br></br>
                             {opportunity.mailingAddress.postalCode}
                           </MDBCardText>
-                        </MDBCol>
-                      </MDBRow>
-                      <MDBRow>
-                        <MDBCol></MDBCol>
-                        <MDBCol>
                           <MDBBtn
                             color="deep-purple"
                             outline
@@ -184,8 +179,13 @@ function Opportunity() {
                             className="text-center mt-4 mb-1 pl-5 pr-5"
                             onClick={handleFormSubmit}
                           >
-                            Save this opportunity
+                            SAVE
                           </MDBBtn>
+                        </MDBCol>
+                      </MDBRow>
+                      <MDBRow>
+                        <MDBCol></MDBCol>
+                        <MDBCol>
                         </MDBCol>
                         <MDBCol></MDBCol>
                       </MDBRow>
