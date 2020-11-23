@@ -1,4 +1,4 @@
-# Assist
+# <img alt="assist logo" class="border-radius" src="./client/public/images/assist.png">
 
 ## Description
 
@@ -12,17 +12,41 @@ An application utilizing the Charity Navigator API to connects users with volunt
 
 <img float="left" alt="CSS badge" src="https://img.shields.io/badge/CSS-1%25-blueviolet">
 
+## Libraries & Frameworks
+
+- Charity Navigator API
+- MDBootstrap
+- MongoDB
+- Robo 3T
+- JWT Token Authentication
+- React.js
+- Node.js
+
 ## Features
 
 - When users arrive at the home page, they are prompted with a call to action to either `login` or `signup`.
 
-- Once users log in or sign up, they are redirected to the `search` page. This page allows users to search for an opportunity by keyword and filter by state.
+<img alt="landing page" class="border-radius" src="./client/public/images/landing.png">
 
-- Users are presented with their search `results`; an image of the opportunity, title, who to contact about the opportunity, and the option to save.
+- Once users log in or sign up, they are redirected to the `search` page.
+
+  <img alt="login" class="border-radius" src="./client/public/images/login.png">
+
+  <img alt="signup" class="border-radius" src="./client/public/images/signup.png">
+
+  - This page allows users to search for an opportunity by keyword and filter by state.
+
+  - Users are presented with their search `results`; an image of the opportunity, title, who to contact about the opportunity, and the option to save.
+
+  <img alt="search results" class="border-radius" src="./client/public/images/searchCard.png">
 
 - Users can access their saved opportunities and any opportunities they have created on their `profile`. Here, users can delete any saved opportunities and edit or delete any they have created.
 
-- If a user would like to add an opportunity, they click `create` in the navbar. This brings users to a create form where they can submit
+  <img alt="profile" class="border-radius" src="./client/public/images/profile.png">
+
+- If a user would like to add an opportunity, they click `create` in the navbar. This brings users to a create form where they can submit their opportunity.
+
+  <img alt="create form" class="border-radius" src="./client/public/images/createForm.png">
 
 ## Work in Progress
 
