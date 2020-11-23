@@ -17,9 +17,7 @@ const ImageCard = () => {
             Meet the Developers
           </h2>
           <p className="grey-text w-responsive mx-auto mb-5">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit,
-            error amet numquam iure provident voluptate esse quasi, veritatis
-            totam voluptas nostrum quisquam eum porro a pariatur veniam.
+            Bridget and Alyssa are both students at the UCF full-stack coding bootcamp, this is an application built in React for the Project 3 assignment.
           </p>
           <MDBRow className="d-flex justify-content-center">
             <MDBCol lg="3" md="6" className="mb-lg-0 mb-5">
@@ -33,8 +31,7 @@ const ImageCard = () => {
                 Fullstack Web Developer
               </p>
               <p className="grey-text">
-                Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci sed quia non numquam modi tempora eius.
+               Alyssa De Metro is an Orlando native passionate about web development and continuing her education. In her free time she loves reading, writing, and playing with her black fur child named Kitty. 
               </p>
               <ul className="list-unstyled mb-0">
                 <a
