@@ -31,8 +31,11 @@ The following features of the Assist application are works in progress or (WIP).
 - Filtering `searches` by keyword
 - Rendering content from `create form` onto cards that render to a user's `profile` and displays in the `search`
 - User can `save` opportunities to their `profile`
+- Using an additional `API` to pull from even more opportunities
+- Creation of `calendar` page so users can manage their opportunities and see upcoming events near them
+- Color-code `search` result cards based on when the event is happening. Grey = past, red = currently happening, yellow = in a few days, green = 1+ week(s) away.
 
-- ## Deployment & Repository
+## Deployment & Repository
 
 - Heroku:
 - GitHub: https://github.com/bridgetrshannon/Assist
