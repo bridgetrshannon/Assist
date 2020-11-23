@@ -17,7 +17,9 @@ const ImageCard = () => {
             Meet the Developers
           </h2>
           <p className="grey-text w-responsive mx-auto mb-5">
-            Bridget and Alyssa are both students at the UCF full-stack coding bootcamp, this is an application built in React for the Project 3 assignment.
+            Bridget and Alyssa are both students at the UCF full-stack coding
+            bootcamp, this is an application built in React for the Project 3
+            assignment.
           </p>
           <MDBRow className="d-flex justify-content-center">
             <MDBCol lg="3" md="6" className="mb-lg-0 mb-5">
@@ -31,7 +33,10 @@ const ImageCard = () => {
                 Fullstack Web Developer
               </p>
               <p className="grey-text">
-               Alyssa De Metro is an Orlando native passionate about web development and continuing her education. In her free time she loves reading, writing, and playing with her black fur child named Kitty. 
+                Alyssa De Metro is an Orlando native passionate about web
+                development and continuing her education. In her free time she
+                loves reading, writing, and playing with her black fur child
+                named Kitty.
               </p>
               <ul className="list-unstyled mb-0">
                 <a
@@ -64,8 +69,10 @@ const ImageCard = () => {
                 Fullstack Web Developer
               </p>
               <p className="grey-text">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                ipsa accusantium doloremque rem laudantium totam aperiam.
+                Bridget Shannon is leveraging a music education background to
+                build a more inviting and accessible user experience. They enjoy
+                playing and performing music and adventuring with their dog,
+                cat, and fiance.
               </p>
               <ul className="list-unstyled mb-0">
                 <a
