@@ -1,7 +1,5 @@
 # Assist
 
-<!-- # ![assist](./public/assets/audiophyleLogo.png) -->
-
 ## Description
 
 An application utilizing the Charity Navigator API to connects users with volunteer and community engagement opportunities. This is Project 3 for University of Central Florida's Fullstack Coding Bootcamp. Contributors include Alyssa DeMetro and Bridget Shannon.
