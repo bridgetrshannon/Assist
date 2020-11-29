@@ -10,9 +10,9 @@ import {
   MDBRow,
   MDBInput
 } from "mdbreact";
-import API from "../utils/API";
-import NoMatch from "./noMatch";
-import { List, ListItem } from "../components/List/index";
+import API from "../../utils/API";
+import { List, ListItem } from "../List/index";
+import "./style.css";
 
 
 
@@ -152,7 +152,7 @@ function Opportunity() {
                         <MDBCol>
                           <img
                             alt="searchImg"
-                            src="https://i.imgur.com/dB5BbyF.jpg"
+                            src="https://i.imgur.com/46ftrUw.jpg"
                             width="160px"
                           />
                         </MDBCol>
@@ -183,12 +183,6 @@ function Opportunity() {
                           </MDBBtn>
                         </MDBCol>
                       </MDBRow>
-                      <MDBRow>
-                        <MDBCol></MDBCol>
-                        <MDBCol>
-                        </MDBCol>
-                        <MDBCol></MDBCol>
-                      </MDBRow>
                     </MDBCardBody>
                   </MDBCard>
                 </MDBContainer>
@@ -197,7 +191,9 @@ function Opportunity() {
           })}
         </List>
       ) : (
-        <NoMatch />
+        <div class="searchSpinner spinner-border text-secondary" role="status">
+  <span class="sr-only">Loading...</span>
+</div>
       )}
     </div>
   );
