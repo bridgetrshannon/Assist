@@ -168,7 +168,7 @@ function CreateForm(props) {
                           <MDBCol>
                             <img
                               alt="searchImg"
-                              src="https://i.imgur.com/46ftrUw.jpg"
+                              src="https://i.imgur.com/dB5BbyF.jpg"
                               width="160px"
                             />
                           </MDBCol>
