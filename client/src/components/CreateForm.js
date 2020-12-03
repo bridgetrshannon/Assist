@@ -191,7 +191,9 @@ function CreateForm(props) {
           })}
         </List>
       ) : (
-        <h3>No Results to Display</h3>
+        <div class="searchSpinner spinner-border text-secondary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
       )}
     </div>
   );
