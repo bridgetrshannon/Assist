@@ -2,6 +2,7 @@ import React from "react";
 import { MDBInput } from "mdbreact";
 
 const SearchForm = () => {
+
   return (
     <div>
       <MDBInput
