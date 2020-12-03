@@ -8,13 +8,11 @@ import {
   MDBContainer,
   MDBCol,
   MDBRow,
-  MDBInput
+  MDBInput,
 } from "mdbreact";
 import API from "../../utils/API";
 import { List, ListItem } from "../List/index";
 import "./style.css";
-
-
 
 function Opportunity() {
   // Setting our component's initial state
@@ -34,22 +32,41 @@ function Opportunity() {
         console.log(res);
       })
       .catch((err) => console.log(err));
-  };
+  }
 
   //create the element within the return
   //create an onChange event that captures the chosen value, and passes it into/triggers a function
- 
-  
-    function handleChange(event) {
-     let capturedState = event.target.value
-      API.getStateOpportunity(capturedState)
+
+  function handleChange(event) {
+    let capturedState = event.target.value;
+    API.getStateOpportunity(capturedState)
       .then((res) => {
         setOpportunity(res.data);
         console.log(res);
       })
       .catch((err) => console.log(err));
-    }
-  //create a function similar to loadAll() that does an API call and updates the state using setOppourtunity 
+  }
+
+  // function handleKeyword(event) {
+  //   let capturedKeyword = event.target.value;
+  //   API.getKeywordOpportunity(capturedKeyword)
+  //     .then((res) => {
+  //       setOpportunity(res.data);
+  //       console.log(res);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }
+
+  function handleBoth(event) {
+    let capturedBoth = event.target.value;
+    API.getBothOpportunity(capturedBoth)
+      .then((res) => {
+        setOpportunity(res.data);
+        console.log(res);
+      })
+      .catch((err) => console.log(err));
+  }
+  //create a function similar to loadAll() that does an API call and updates the state using setOpportunity
 
   function handleFormSubmit(event) {
     console.log("data", formObject);
@@ -73,7 +90,9 @@ function Opportunity() {
       <MDBRow center className="mt-5">
         <MDBCol md="3" className="pr-2">
           <select className="form-control grey-text" onChange={handleChange}>
-            <option value="" selected>Select Your State</option>
+            <option value="" selected>
+              Select Your State
+            </option>
             <option value="AL">Alabama</option>
             <option value="AK">Alaska</option>
             <option value="AZ">Arizona</option>
@@ -138,82 +157,83 @@ function Opportunity() {
             htmlFor="defaultFormRegisterSearchEx"
             className="grey-text"
             containerClass="mt-0"
+            onChange={handleBoth}
           />
         </MDBCol>
-        </MDBRow>
-        <MDBRow>
-          <MDBCol md="5"></MDBCol>
+      </MDBRow>
+      <MDBRow>
+        <MDBCol md="5"></MDBCol>
         <MDBCol md="1">
           <MDBBtn
             color="deep-purple"
             outline
             type="submit"
             className="text-center mt-4 mb-1 pl-5 pr-5"
-            ><i class="fas fa-search"></i>
-            </MDBBtn>
+          >
+            <i class="fas fa-search"></i>
+          </MDBBtn>
         </MDBCol>
         <MDBCol md="5"></MDBCol>
       </MDBRow>
-        {opportunity.length ? (
-          <List>
-            {opportunity.map((opportunity) => {
-              return (
-                <ListItem key={opportunity.ein}>
-                  <MDBContainer>
-                    <MDBCard className="w-100 mb-4 m">
-                      <MDBCardBody>
-                        <MDBRow>
-                          <MDBCol>
-                            <img
-                              alt="searchImg"
-                              src="https://i.imgur.com/dB5BbyF.jpg"
-                              width="160px"
-                            />
-                          </MDBCol>
-                          <MDBCol>
-                            <MDBCardTitle>{opportunity.charityName}</MDBCardTitle>
-                            {/* <MDBCardText>
+      {opportunity.length ? (
+        <List>
+          {opportunity.map((opportunity) => {
+            return (
+              <ListItem key={opportunity.ein}>
+                <MDBContainer>
+                  <MDBCard className="w-100 mb-4 m">
+                    <MDBCardBody>
+                      <MDBRow>
+                        <MDBCol>
+                          <img
+                            alt="searchImg"
+                            src="https://i.imgur.com/dB5BbyF.jpg"
+                            width="160px"
+                          />
+                        </MDBCol>
+                        <MDBCol>
+                          <MDBCardTitle>{opportunity.charityName}</MDBCardTitle>
+                          {/* <MDBCardText>
                             {opportunity.irsClassification.classification}
                           </MDBCardText> */}
-                          </MDBCol>
-                          <MDBCol>
-                            <MDBCardTitle>Located at:</MDBCardTitle>
-                            <MDBCardText>
-                              {opportunity.mailingAddress.streetAddress1}{" "}
-                              <br></br>
-                              {opportunity.mailingAddress.city + ", "}
-                              {opportunity.mailingAddress.stateOrProvince}
-                              <br></br>
-                              {opportunity.mailingAddress.postalCode}
-                            </MDBCardText>
-                            <MDBBtn
-                              color="deep-purple"
-                              outline
-                              type="submit"
-                              className="text-center mt-4 mb-1 pl-5 pr-5"
-                              onClick={handleFormSubmit}
-                            >
-                              SAVE
+                        </MDBCol>
+                        <MDBCol>
+                          <MDBCardTitle>Located at:</MDBCardTitle>
+                          <MDBCardText>
+                            {opportunity.mailingAddress.streetAddress1}{" "}
+                            <br></br>
+                            {opportunity.mailingAddress.city + ", "}
+                            {opportunity.mailingAddress.stateOrProvince}
+                            <br></br>
+                            {opportunity.mailingAddress.postalCode}
+                          </MDBCardText>
+                          <MDBBtn
+                            color="deep-purple"
+                            outline
+                            type="submit"
+                            className="text-center mt-4 mb-1 pl-5 pr-5"
+                            onClick={handleFormSubmit}
+                          >
+                            SAVE
                           </MDBBtn>
-                          </MDBCol>
-                        </MDBRow>
-                        <MDBRow>
-                          <MDBCol></MDBCol>
-                          <MDBCol>
-                          </MDBCol>
-                          <MDBCol></MDBCol>
-                        </MDBRow>
-                      </MDBCardBody>
-                    </MDBCard>
-                  </MDBContainer>
-                </ListItem>
+                        </MDBCol>
+                      </MDBRow>
+                      <MDBRow>
+                        <MDBCol></MDBCol>
+                        <MDBCol></MDBCol>
+                        <MDBCol></MDBCol>
+                      </MDBRow>
+                    </MDBCardBody>
+                  </MDBCard>
+                </MDBContainer>
+              </ListItem>
             );
           })}
         </List>
       ) : (
         <div class="searchSpinner spinner-border text-secondary" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
+          <span class="sr-only">Loading...</span>
+        </div>
       )}
     </div>
   );
