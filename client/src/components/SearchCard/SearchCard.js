@@ -18,6 +18,34 @@ function Opportunity() {
   // Setting our component's initial state
   const [opportunity, setOpportunity] = useState([]);
   const [formObject, setFormObject] = useState({});
+  const [category, setCategory] = React.useState("");
+  const [search, setSearch] = useState("");
+
+  const handleChange = (event) => {
+    setCategory(event.target.value);
+  };
+
+   // function that will show the anime / manga that you searched and set the state
+   function getInfo(search, category) {
+    API.getBothOpportunity(search, category)
+      .then((res) => setOpportunity(res.data))
+      .catch((err) => console.log(err));
+  }
+  // changes search from id="search" on change and sets the state of it to the current search
+  function handleInputChange(event) {
+    setSearch(event.target.value);
+  }
+  // handles the submit to use the API call dependant on search term and type of anime/manga in category.
+  //passing type through Search component from state
+  function handleFormSubmit(event, category) {
+    event.preventDefault();
+    getInfo(search, category);
+  }
+
+//get keyword value and pass it into a function 
+//that takes in keyword and selected state values
+//and passes them into an API call then updates the state
+//so that the results are rendered onto the page
 
   // Load all opportunities and store them with loadAll
   useEffect(() => {
@@ -37,15 +65,16 @@ function Opportunity() {
   //create the element within the return
   //create an onChange event that captures the chosen value, and passes it into/triggers a function
 
-  function handleChange(event) {
-    let capturedState = event.target.value;
-    API.getStateOpportunity(capturedState)
-      .then((res) => {
-        setOpportunity(res.data);
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
-  }
+  //takes in user's selected state and updates the opportunity state using the setOpportunity method
+  // function handleStateChange(event) {
+  //   let capturedState = event.target.value;
+  //   API.getStateOpportunity(capturedState)
+  //     .then((res) => {
+  //       setOpportunity(res.data);
+  //       console.log(res);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }
 
   // function handleKeyword(event) {
   //   let capturedKeyword = event.target.value;
@@ -57,39 +86,40 @@ function Opportunity() {
   //     .catch((err) => console.log(err));
   // }
 
-  function handleBoth(event) {
-    let capturedBoth = event.target.value;
-    API.getBothOpportunity(capturedBoth)
-      .then((res) => {
-        setOpportunity(res.data);
-        console.log(res);
-      })
-      .catch((err) => console.log(err));
-  }
+  // function handleBoth(event) {
+  //   let capturedBoth = event.target.value;
+  //   API.getBothOpportunity(capturedBoth)
+  //     .then((res) => {
+  //       setOpportunity(res.data);
+  //       console.log(res);
+  //     })
+  //     .catch((err) => console.log(err));
+  // }
   //create a function similar to loadAll() that does an API call and updates the state using setOpportunity
 
-  function handleFormSubmit(event) {
-    console.log("data", formObject);
-    event.preventDefault();
-    if (formObject.name && formObject.organization) {
-      API.saveOpportunity({
-        name: formObject.name,
-        organization: formObject.organization,
-        email: formObject.email,
-        phoneNumber: parseInt(formObject.phoneNumber),
-        title: formObject.title,
-        textarea: formObject.textarea,
-      })
-        .then((res) => loadAll())
-        .catch((err) => console.log(err));
-    }
-  }
+  // function handleFormSubmit(event) {
+  //   console.log("data", formObject);
+  //   event.preventDefault();
+  //   if (formObject.name && formObject.organization) {
+  //     API.saveOpportunity({
+  //       name: formObject.name,
+  //       organization: formObject.organization,
+  //       email: formObject.email,
+  //       phoneNumber: parseInt(formObject.phoneNumber),
+  //       title: formObject.title,
+  //       textarea: formObject.textarea,
+  //     })
+  //       .then((res) => loadAll())
+  //       .catch((err) => console.log(err));
+  //   }
+  // }
 
   return (
     <div>
+      <form>
       <MDBRow center className="mt-5">
         <MDBCol md="3" className="pr-2">
-          <select className="form-control grey-text" onChange={handleChange}>
+          <select value={category} className="form-control grey-text" onChange={handleChange}>
             <option value="" selected>
               Select Your State
             </option>
@@ -151,13 +181,14 @@ function Opportunity() {
             label="search by keyword"
             group
             type="text"
+            name="search"
             validate
             error="wrong"
             success="right"
             htmlFor="defaultFormRegisterSearchEx"
             className="grey-text"
             containerClass="mt-0"
-            onChange={handleBoth}
+            onChange={handleInputChange}
           />
         </MDBCol>
       </MDBRow>
@@ -165,16 +196,19 @@ function Opportunity() {
         <MDBCol md="5"></MDBCol>
         <MDBCol md="1">
           <MDBBtn
+            disableElevation
             color="deep-purple"
             outline
             type="submit"
             className="text-center mt-4 mb-1 pl-5 pr-5"
+            onClick={(e) => {handleFormSubmit(e, category)}}
           >
             <i class="fas fa-search"></i>
           </MDBBtn>
         </MDBCol>
         <MDBCol md="5"></MDBCol>
       </MDBRow>
+      </form>
       {opportunity.length ? (
         <List>
           {opportunity.map((opportunity) => {
