@@ -1,6 +1,5 @@
 import React from "react";
-import SearchCard from "../components/SearchCard";
-import SearchBtn from "../components/SearchBtn";
+import SearchCard from "../components/searchCard/SearchCard";
 import { MDBRow, MDBCol } from "mdbreact";
 
 

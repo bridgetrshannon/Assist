@@ -71,122 +71,142 @@ function Opportunity() {
   return (
     <div>
       <MDBRow center className="mt-5">
-        <MDBCol md="3">
-        <MDBInput
-        label="search by keyword"
-        group
-        type="text"
-        validate
-        error="wrong"
-        success="right"
-        htmlFor="defaultFormRegisterSearchEx"
-        className="grey-text"
-        containerClass="mt-0"
-      />
-        </MDBCol>
-        <MDBCol md="2" className="pr-2">
-        <select className="form-control grey-text" onChange={handleChange}>
-  <option value="AL">Alabama</option>
-  <option value="AK">Alaska</option>
-  <option value="AZ">Arizona</option>
-  <option value="AR">Arkansas</option>
-  <option value="CA">California</option>
-  <option value="CO">Colorado</option>
-  <option value="CT">Connecticut</option>
-  <option value="DE">Delaware</option>
-  <option value="DC">District Of Columbia</option>
-  <option value="FL">Florida</option>
-  <option value="GA">Georgia</option>
-  <option value="HI">Hawaii</option>
-  <option value="ID">Idaho</option>
-  <option value="IL">Illinois</option>
-  <option value="IN">Indiana</option>
-  <option value="IA">Iowa</option>
-  <option value="KS">Kansas</option>
-  <option value="KY">Kentucky</option>
-  <option value="LA">Louisiana</option>
-  <option value="ME">Maine</option>
-  <option value="MD">Maryland</option>
-  <option value="MA">Massachusetts</option>
-  <option value="MI">Michigan</option>
-  <option value="MN">Minnesota</option>
-  <option value="MS">Mississippi</option>
-  <option value="MO">Missouri</option>
-  <option value="MT">Montana</option>
-  <option value="NE">Nebraska</option>
-  <option value="NV">Nevada</option>
-  <option value="NH">New Hampshire</option>
-  <option value="NJ">New Jersey</option>
-  <option value="NM">New Mexico</option>
-  <option value="NY">New York</option>
-  <option value="NC">North Carolina</option>
-  <option value="ND">North Dakota</option>
-  <option value="OH">Ohio</option>
-  <option value="OK">Oklahoma</option>
-  <option value="OR">Oregon</option>
-  <option value="PA">Pennsylvania</option>
-  <option value="RI">Rhode Island</option>
-  <option value="SC">South Carolina</option>
-  <option value="SD">South Dakota</option>
-  <option value="TN">Tennessee</option>
-  <option value="TX">Texas</option>
-  <option value="UT">Utah</option>
-  <option value="VT">Vermont</option>
-  <option value="VA">Virginia</option>
-  <option value="WA">Washington</option>
-  <option value="WV">West Virginia</option>
-  <option value="WI">Wisconsin</option>
-  <option value="WY">Wyoming</option>
+        <MDBCol md="3" className="pr-2">
+          <select className="form-control grey-text" onChange={handleChange}>
+            <option value="" selected>Select Your State</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="DC">District Of Columbia</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
           </select>
         </MDBCol>
+        <MDBCol md="3">
+          <MDBInput
+            label="search by keyword"
+            group
+            type="text"
+            validate
+            error="wrong"
+            success="right"
+            htmlFor="defaultFormRegisterSearchEx"
+            className="grey-text"
+            containerClass="mt-0"
+          />
+        </MDBCol>
+        </MDBRow>
+        <MDBRow>
+          <MDBCol md="5"></MDBCol>
+        <MDBCol md="1">
+          <MDBBtn
+            color="deep-purple"
+            outline
+            type="submit"
+            className="text-center mt-4 mb-1 pl-5 pr-5"
+            ><i class="fas fa-search"></i>
+            </MDBBtn>
+        </MDBCol>
+        <MDBCol md="5"></MDBCol>
       </MDBRow>
-      {opportunity.length ? (
-        <List>
-          {opportunity.map((opportunity) => {
-            return (
-              <ListItem key={opportunity.ein}>
-                <MDBContainer>
-                  <MDBCard className="w-100 mb-4 m">
-                    <MDBCardBody>
-                      <MDBRow>
-                        <MDBCol>
-                          <img
-                            alt="searchImg"
-                            src="https://i.imgur.com/46ftrUw.jpg"
-                            width="160px"
-                          />
-                        </MDBCol>
-                        <MDBCol>
-                          <MDBCardTitle>{opportunity.charityName}</MDBCardTitle>
-                          {/* <MDBCardText>
+        {opportunity.length ? (
+          <List>
+            {opportunity.map((opportunity) => {
+              return (
+                <ListItem key={opportunity.ein}>
+                  <MDBContainer>
+                    <MDBCard className="w-100 mb-4 m">
+                      <MDBCardBody>
+                        <MDBRow>
+                          <MDBCol>
+                            <img
+                              alt="searchImg"
+                              src="https://i.imgur.com/dB5BbyF.jpg"
+                              width="160px"
+                            />
+                          </MDBCol>
+                          <MDBCol>
+                            <MDBCardTitle>{opportunity.charityName}</MDBCardTitle>
+                            {/* <MDBCardText>
                             {opportunity.irsClassification.classification}
                           </MDBCardText> */}
-                        </MDBCol>
-                        <MDBCol>
-                          <MDBCardTitle>Located at:</MDBCardTitle>
-                          <MDBCardText>
-                            {opportunity.mailingAddress.streetAddress1}{" "}
-                            <br></br>
-                            {opportunity.mailingAddress.city + ", "}
-                            {opportunity.mailingAddress.stateOrProvince}
-                            <br></br>
-                            {opportunity.mailingAddress.postalCode}
-                          </MDBCardText>
-                          <MDBBtn
-                            color="deep-purple"
-                            outline
-                            type="submit"
-                            className="text-center mt-4 mb-1 pl-5 pr-5"
-                            onClick={handleFormSubmit}
-                          >
-                            SAVE
+                          </MDBCol>
+                          <MDBCol>
+                            <MDBCardTitle>Located at:</MDBCardTitle>
+                            <MDBCardText>
+                              {opportunity.mailingAddress.streetAddress1}{" "}
+                              <br></br>
+                              {opportunity.mailingAddress.city + ", "}
+                              {opportunity.mailingAddress.stateOrProvince}
+                              <br></br>
+                              {opportunity.mailingAddress.postalCode}
+                            </MDBCardText>
+                            <MDBBtn
+                              color="deep-purple"
+                              outline
+                              type="submit"
+                              className="text-center mt-4 mb-1 pl-5 pr-5"
+                              onClick={handleFormSubmit}
+                            >
+                              SAVE
                           </MDBBtn>
-                        </MDBCol>
-                      </MDBRow>
-                    </MDBCardBody>
-                  </MDBCard>
-                </MDBContainer>
-              </ListItem>
+                          </MDBCol>
+                        </MDBRow>
+                        <MDBRow>
+                          <MDBCol></MDBCol>
+                          <MDBCol>
+                          </MDBCol>
+                          <MDBCol></MDBCol>
+                        </MDBRow>
+                      </MDBCardBody>
+                    </MDBCard>
+                  </MDBContainer>
+                </ListItem>
             );
           })}
         </List>
