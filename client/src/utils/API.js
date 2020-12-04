@@ -16,7 +16,33 @@ export default {
     );
   },
 
-  // API call to get the information for the anime from the API call and adds those properties to the model
+
+  // Gets all opportunites from API by user's chosen keyword
+  getKeywordOpportunity: function (capturedKeyword) {
+    return axios.get(
+      `${"https://cors-anywhere.herokuapp.com/"}https://api.data.charitynavigator.org/v2/Organizations?app_id=1cd02618&app_key=d031dafe2f636e0d080019ce0eb8be5a&search=` +
+        capturedKeyword
+    );
+  },
+
+  // Gets all opportunites from API by user's chosen keyword
+  getBothOpportunity: function (capturedKeyword, capturedState) {
+    return axios.get(
+      `${"https://cors-anywhere.herokuapp.com/"}https://api.data.charitynavigator.org/v2/Organizations?app_id=1cd02618&app_key=d031dafe2f636e0d080019ce0eb8be5a&search=` +
+        capturedKeyword +
+        `&state=` +
+        capturedState
+    );
+  },
+
+  // https://api.data.charitynavigator.org/v2/Organizations?app_id=1cd02618&app_key=d031dafe2f636e0d080019ce0eb8be5a&search=dogs&state=FL
+
+  //   // Deletes the book with the given id
+  //   deleteOpportunity: function(ein) {
+  //     return axios.delete("/api/opportunity/" + id);
+  //   },
+  //   // Saves a book to the database
+
   saveOpportunity: function (OpportunityData) {
     console.log(OpportunityData);
     return axios.post("/api/opportunity", OpportunityData);
