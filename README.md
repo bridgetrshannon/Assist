@@ -73,7 +73,7 @@ The following features of the Assist application are works in progress or (WIP).
 
 ## Usage
 
-- [Heroku](https://github.com/bridgetrshannon/Assist)
+- [Heroku](https://assist-application.herokuapp.com/)
 - [GitHub](https://github.com/bridgetrshannon/Assist)
 
 ```
