@@ -1,7 +1,6 @@
 import React from "react";
-import SearchCard from "../components/searchCard/SearchCard";
+import SearchCard from "../components/SearchCard/SearchCard";
 import { MDBRow, MDBCol } from "mdbreact";
-
 
 const Search = () => {
   return (
