@@ -16,6 +16,7 @@ export default {
     );
   },
 
+
   // Gets all opportunites from API by user's chosen keyword
   getKeywordOpportunity: function (capturedKeyword) {
     return axios.get(
@@ -41,7 +42,17 @@ export default {
   //     return axios.delete("/api/opportunity/" + id);
   //   },
   //   // Saves a book to the database
+
   saveOpportunity: function (OpportunityData) {
+    console.log(OpportunityData);
     return axios.post("/api/opportunity", OpportunityData);
+  },
+  // grabs the anime's that are saved into the animes state
+  getOpportunity: function (opportunites) {
+    return axios.get("/api/opportunity", opportunites);
+  },
+  // deletes an anime matching it's specific ID for the profile page
+  deleteOpportunity: function (id) {
+    return axios.delete("/api/opportunity" + id, id);
   },
 };
