@@ -97,22 +97,22 @@ function Opportunity() {
   // }
   //create a function similar to loadAll() that does an API call and updates the state using setOpportunity
 
-  // function handleFormSubmit(event) {
-  //   console.log("data", formObject);
-  //   event.preventDefault();
-  //   if (formObject.name && formObject.organization) {
-  //     API.saveOpportunity({
-  //       name: formObject.name,
-  //       organization: formObject.organization,
-  //       email: formObject.email,
-  //       phoneNumber: parseInt(formObject.phoneNumber),
-  //       title: formObject.title,
-  //       textarea: formObject.textarea,
-  //     })
-  //       .then((res) => loadAll())
-  //       .catch((err) => console.log(err));
-  //   }
-  // }
+  function handleFormSubmit(event) {
+    console.log("data", formObject);
+    event.preventDefault();
+    if (formObject.name && formObject.organization) {
+      API.saveOpportunity({
+        name: formObject.name,
+        organization: formObject.organization,
+        email: formObject.email,
+        phoneNumber: parseInt(formObject.phoneNumber),
+        title: formObject.title,
+        textarea: formObject.textarea,
+      })
+        .then((res) => loadAll())
+        .catch((err) => console.log(err));
+    }
+  }
 
   return (
     <div>
