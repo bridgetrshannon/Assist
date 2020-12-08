@@ -71,7 +71,7 @@ function CreateForm(props) {
         <br />
         <MDBInput
           value={props.name}
-          onChange={props.handleInputChange}
+          onChange={handleInputChange}
           label="name"
           name="name"
           group
@@ -84,7 +84,7 @@ function CreateForm(props) {
         />
         <MDBInput
           value={props.organization}
-          onChange={props.handleInputChange}
+          onChange={handleInputChange}
           label="organization"
           group
           name="organization"
@@ -97,7 +97,7 @@ function CreateForm(props) {
         />
         <MDBInput
           value={props.email}
-          onChange={props.handleInputChange}
+          onChange={handleInputChange}
           label="email"
           name="email"
           group
@@ -110,7 +110,7 @@ function CreateForm(props) {
         />
         <MDBInput
           value={props.phoneNumber}
-          onChange={props.handleInputChange}
+          onChange={handleInputChange}
           label="phone number"
           name="phoneNumber"
           group
@@ -123,7 +123,7 @@ function CreateForm(props) {
         />
         <MDBInput
           value={props.title}
-          onChange={props.handleInputChange}
+          onChange={handleInputChange}
           label="opportunity title"
           name="title"
           group
@@ -139,7 +139,7 @@ function CreateForm(props) {
         <br />
         <MDBInput
           value={props.textarea}
-          onChange={props.handleInputChange}
+          onChange={handleInputChange}
           type="textarea"
           name="textarea"
           label="short description"
@@ -180,7 +180,6 @@ function CreateForm(props) {
                               {opportunity.irsClassification.classification}
                             </MDBCardText>
                           </MDBCol>
-                         
                         </MDBRow>
                       </MDBCardBody>
                     </MDBCard>
@@ -192,8 +191,8 @@ function CreateForm(props) {
         </List>
       ) : (
         <div class="searchSpinner spinner-border text-secondary" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>
+          <span class="sr-only">Loading...</span>
+        </div>
       )}
     </div>
   );
