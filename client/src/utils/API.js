@@ -16,7 +16,6 @@ export default {
     );
   },
 
-
   // Gets all opportunites from API by user's chosen keyword
   getKeywordOpportunity: function (capturedKeyword) {
     return axios.get(
@@ -35,23 +34,22 @@ export default {
     );
   },
 
-  // https://api.data.charitynavigator.org/v2/Organizations?app_id=1cd02618&app_key=d031dafe2f636e0d080019ce0eb8be5a&search=dogs&state=FL
+  //   // Creates an opportunity and saves an opportunity to the database
+  createOpportunity: function (createdOpportunity) {
+    console.log(createdOpportunity);
+    return axios.post("/api/opportunity", createdOpportunity);
+  },
 
-  //   // Deletes the book with the given id
-  //   deleteOpportunity: function(ein) {
-  //     return axios.delete("/api/opportunity/" + id);
-  //   },
-  //   // Saves a book to the database
-
+  //   // Saves an opportunity to the database
   saveOpportunity: function (OpportunityData) {
     console.log(OpportunityData);
     return axios.post("/api/opportunity", OpportunityData);
   },
-  // grabs the anime's that are saved into the animes state
+  // grabs the opportunities that are saved into the opportunity state
   getOpportunity: function (opportunites) {
     return axios.get("/api/opportunity", opportunites);
   },
-  // deletes an anime matching it's specific ID for the profile page
+  // deletes an opportunity matching it's specific ID for the profile page
   deleteOpportunity: function (id) {
     return axios.delete("/api/opportunity" + id, id);
   },

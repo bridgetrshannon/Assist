@@ -11,9 +11,7 @@ const savedOpportunitySchema = new Schema({
   date: { type: Date, default: Date.now },
 });
 
-const savedOpportunity = mongoose.model(
+module.exports = savedOpportunity = mongoose.model(
   "savedOpportunity",
   savedOpportunitySchema
 );
-
-module.exports = Opportunity;
