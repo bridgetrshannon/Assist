@@ -15,7 +15,6 @@ import { List, ListItem } from "../List/index";
 import "./style.css";
 
 function Opportunity() {
-  // Setting our component's initial state
   const [opportunity, setOpportunity] = useState([]);
   const [formObject, setFormObject] = useState({});
   const [category, setCategory] = React.useState("");
@@ -25,7 +24,7 @@ function Opportunity() {
     setCategory(event.target.value);
   };
 
-  // function that will show the opportunity that you searched and set the state
+  //   function that will show the opportunity that you searched and set the state
   function getInfo(search, category) {
     API.getBothOpportunity(search, category)
       .then((res) => setOpportunity(res.data))
@@ -158,9 +157,9 @@ function Opportunity() {
           <MDBCol md="5"></MDBCol>
         </MDBRow>
       </form>
-      {opportunity.length ? (
+      {this.opportunity.length ? (
         <List>
-          {opportunity.map((opportunity) => {
+          {this.opportunity.map((opportunity) => {
             return (
               <ListItem key={opportunity.ein}>
                 <MDBContainer>
@@ -195,7 +194,7 @@ function Opportunity() {
                             outline
                             type="submit"
                             className="text-center mt-4 mb-1 pl-5 pr-5"
-                            // onClick={handleSaveOpportunity}
+                            onClick={this.handleSaveOpportunity}
                           >
                             SAVE
                           </MDBBtn>
@@ -221,4 +220,5 @@ function Opportunity() {
     </div>
   );
 }
+
 export default Opportunity;

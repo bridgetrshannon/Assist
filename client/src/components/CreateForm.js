@@ -51,7 +51,7 @@ function CreateForm(props) {
     console.log("data", formObject);
     event.preventDefault();
     if (formObject.name && formObject.organization) {
-      API.saveOpportunity({
+      API.createOpportunity({
         name: formObject.name,
         organization: formObject.organization,
         email: formObject.email,
