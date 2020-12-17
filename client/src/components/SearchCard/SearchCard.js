@@ -190,6 +190,8 @@ function Opportunity() {
                             <br></br>
                             {opportunity.mailingAddress.postalCode}
                           </MDBCardText>
+                          </MDBCol>
+                          </MDBRow>
                           <MDBBtn
                             color="deep-purple"
                             outline
@@ -199,8 +201,7 @@ function Opportunity() {
                           >
                             SAVE
                           </MDBBtn>
-                        </MDBCol>
-                      </MDBRow>
+                        
                       <MDBRow>
                         <MDBCol></MDBCol>
                         <MDBCol></MDBCol>
