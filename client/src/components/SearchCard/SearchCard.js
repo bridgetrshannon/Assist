@@ -175,7 +175,7 @@ function Opportunity() {
                           />
                         </MDBCol>
                         <MDBCol>
-                          <MDBCardTitle>{opportunity.charityName}</MDBCardTitle>
+                          <MDBCardTitle><a href={opportunity.organization.charityNavigatorURL}>{opportunity.charityName}</a></MDBCardTitle>
                           {/* <MDBCardText>
                             {opportunity.irsClassification.classification}
                           </MDBCardText> */}
